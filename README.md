@@ -85,26 +85,26 @@ This file in Nexus format contains the sequence alignments for ten nuclear marke
 | Heterochromis_multidensA | _Heterochromis multidens_ | African cichlids     |
 | Cichla_temensisA         | _Cichla temensis_         | Neotropical cichlids |
 | Heros_appendictulatusA   | _Heros appendictulatus_   | Neotropical cichlids |
-| Etroplus_maculatusA      | *Etroplus maculatus*      | Indian cichlids      |
-| Oryzias_latipes          | *Oryzias latipes*         | Atherinomorphae      |
-| Trachinotus_carolinusA   | *Trachinotus carolinus*   | Carangaria           |
-| Channa_striataA          | *Channa striata*          | Anabantiformes       |
-| Monopterus_albusA        | *Monopterus albus*        | Synbranchiformes     |
-| Gasterosteus_acuC        | *Gasterosteus aculeatus*  | Eupercaria           |
-| Astrapogon_stellatusA    | *Astrapogon tellatus*     | Gobiaria             |
-| Aulostomus_chinensisA    | *Aulostomus chinensis*    | Syngnatharia         |
-| Thunnus_albacaresA       | *Thunnus albacares*       | Pelagaria            |
-| Porichthys_notatusA      | *Porichthys notatus*      | Batrachoidiaria      |
-| Diplacanthopoma_brunneaA | *Diplacanthopoma brunnea* | Ophidiaria           |
-| Sargocentron_cornutumA   | *Sargocentron cornutum*   | Holocentrimorphaceae |
-| Rondeletia_loricataA     | *Rondeletia loricata*     | Beryciformes         |
-| Monocentris_japonicaA    | *Monocentris japonica*    | Trachichthyiformes   |
-| Polymixia_japonicaA      | *Polymixia japonica*      | Polymixiipterygii    |
-| Regalecus_Glesne         | *Regalecus glesne*        | Lampripterygii       |
-| Percopsis_omiscomaycusA  | *Percopsis omiscomaycus*  | Percopsaria          |
-| Zenopsis_conchiferaB     | *Zenopsis conchifera*     | Zeiariae             |
-| Stylephorus_chordatusB   | *Stylephorus chordatus*   | Stylephoriformes     |
-| Gadus_morhua             | *Gadus morhua*            | Gadiformes           |
+| Etroplus_maculatusA      | _Etroplus maculatus_      | Indian cichlids      |
+| Oryzias_latipes          | _Oryzias latipes_         | Atherinomorphae      |
+| Trachinotus_carolinusA   | _Trachinotus carolinus_   | Carangaria           |
+| Channa_striataA          | _Channa striata_          | Anabantiformes       |
+| Monopterus_albusA        | _Monopterus albus_        | Synbranchiformes     |
+| Gasterosteus_acuC        | _Gasterosteus aculeatus_  | Eupercaria           |
+| Astrapogon_stellatusA    | _Astrapogon tellatus_     | Gobiaria             |
+| Aulostomus_chinensisA    | _Aulostomus chinensis_    | Syngnatharia         |
+| Thunnus_albacaresA       | _Thunnus albacares_       | Pelagaria            |
+| Porichthys_notatusA      | _Porichthys notatus_      | Batrachoidiaria      |
+| Diplacanthopoma_brunneaA | _Diplacanthopoma brunnea_ | Ophidiaria           |
+| Sargocentron_cornutumA   | _Sargocentron cornutum_   | Holocentrimorphaceae |
+| Rondeletia_loricataA     | _Rondeletia loricata_     | Beryciformes         |
+| Monocentris_japonicaA    | _Monocentris japonica_    | Trachichthyiformes   |
+| Polymixia_japonicaA      | _Polymixia japonica_      | Polymixiipterygii    |
+| Regalecus_Glesne         | _Regalecus glesne_        | Lampripterygii       |
+| Percopsis_omiscomaycusA  | _Percopsis omiscomaycus_  | Percopsaria          |
+| Zenopsis_conchiferaB     | _Zenopsis conchifera_     | Zeiariae             |
+| Stylephorus_chordatusB   | _Stylephorus chordatus_   | Stylephoriformes     |
+| Gadus_morhua             | _Gadus morhua_            | Gadiformes           |
 
 </center>
 
