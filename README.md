@@ -116,12 +116,12 @@ grep -f Near_et_al_ids.txt -e "\[" Near_et_al.nex | sed -e $'s/\[/\\\n\[/g' >> N
 tail -n 35 Near_et_al.nex | sed 's/paup/assumptions/g' >> Near_et_al_red.nex
 ```
 
-If you should not be able to execute these commands on the command-line, you could instead download the reduced alignment file `Near_et_al_red.nex` using the link in the left-hand column under "Data".
+If you should not be able to execute these commands on the command line, you could instead download the reduced alignment file `Near_et_al_red.nex` using the link in the left-hand column under "Data".
 
 
 ### Installing the CladeAge package
 
-To specify fossil constraints as calibrations points in BEAUti according to the CladeAge model of Matschiner et al. {% cite Matschiner2017 -A --file CladeAge-Tutorial/master-refs.bib %}, we'll first have to install the CladeAge add-on package for BEAST2. To do so, open BEAUti, and click on "Manage Packages" in the "File" menu. This will open a window for the BEAST2 Package Manager. In this window, select "CA" and click "Intstall/Upgrade" as shown in the screenshot below.
+To use fossil constraints as calibrations points according to the CladeAge model, we'll first have to install the CladeAge add-on package for BEAST2. To do so, open BEAUti, and click on "Manage Packages" in the "File" menu. This will open a window for the BEAST2 Package Manager. In this window, select "CA" and click "Intstall/Upgrade" as shown in the screenshot below.
 
 <figure>
 	<a id="fig:beauti1"></a>
@@ -132,10 +132,22 @@ To specify fossil constraints as calibrations points in BEAUti according to the 
 Close and reopen BEAUti. You should then see that an additional tab has been added named "Clade Age", as in the screenshot below.
 
 <figure>
-	<a id="fig:beauti1"></a>
+	<a id="fig:beauti2"></a>
 	<img style="width:80%;" src="figures/beauti2.png" alt= BEAUti"">
 	<figcaption>Figure 2: The BEAUti interface after installing the CladeAge package.</figcaption>
 </figure>
+
+
+### Generating the analysis file with BEAUti
+
+Click on "Import Alignment" in BEAUti's "File" menu, and select the alignment file `Near_et_al_red.nex`. BEAUti should then recognize 30 different partitions, one for each codon position of each of the ten markers. The BEAUti window should then look as shown in the screenshot below.
+
+<figure>
+	<a id="fig:beauti3"></a>
+	<img style="width:80%;" src="figures/beauti3.png" alt= BEAUti"">
+	<figcaption>Figure 3: The BEAUti interface after importing the alignment file.</figcaption>
+</figure>
+
 
 
 
