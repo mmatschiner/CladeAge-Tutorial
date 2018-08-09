@@ -125,7 +125,7 @@ To specify fossil constraints as calibrations points in BEAUti according to the 
 
 <figure>
 	<a id="fig:beauti1"></a>
-	<img style="width:25%;" src="figures/beauti1.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti1.png" alt= BEAUti"">
 	<figcaption>Figure 1: Install the CladeAge package.</figcaption>
 </figure>
 
