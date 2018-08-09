@@ -1,9 +1,9 @@
 ---
-author: Author I. Name
+author: Michael Matschiner
 level: Intermediate
-title: Tutorial template
-subtitle: Template for an empty tutorial
-beastversion: 2.4.2
+title: CladeAge Tutorial
+subtitle: Fossil-based divergence-time estimation with CladeAge
+beastversion: 2.5.0
 ---
 
 
