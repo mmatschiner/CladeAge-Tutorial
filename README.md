@@ -67,7 +67,7 @@ The approach of CladeAge is similar to the more traditional node-dating approach
 
 ### Preparing the molecular dataset
 
-As a first step, download the molecular dataset of Near et al. {% cite Near2013 -A --file CladeAge-Tutorial/master-refs.bib %} from the Dryad data repository connected to their publication. On the command-line, this could be done using the `wget` utility:
+As a first step, download the molecular dataset of Near et al. {% cite Near2013 -A --file CladeAge-Tutorial/master-refs.bib %} from the Dryad data repository connected to their publication. On the command-line of a Mac or Linux computer, this could be done using the `wget` utility:
 
 ```sh
 wget https://datadryad.org/bitstream/handle/10255/dryad.50839/Near_et_al.nex
@@ -75,7 +75,38 @@ wget https://datadryad.org/bitstream/handle/10255/dryad.50839/Near_et_al.nex
 
 Alternatively, you could use your browser to open the Dryad repository [https://datadryad.org/resource/doi:10.5061/dryad.d3mb4](https://datadryad.org/resource/doi:10.5061/dryad.d3mb4) and download the file `Near_et_al.nex`.
 
-This file in Nexus format contains the sequence alignments for ten nuclear markers, sequenced for 608 species of spiny-rayed fishes. As this dataset is far too large to be analyzed in this tutorial, we'll extract the sequences of 24 species that represent major groups of spiny-rayed fishes (Betancur-R. et al. 2017) as well as the most divergent groups of cichlid fishes. The 24 species that we will focus on are listed in the table below.
+This file in Nexus format contains the sequence alignments for ten nuclear markers, sequenced for 608 species of spiny-rayed fishes. As this dataset is far too large to be analyzed in this tutorial, we'll extract the sequences of 24 species that represent major groups of spiny-rayed fishes {% cite Betancur2017 -A --file CladeAge-Tutorial/master-refs.bib %} as well as the most divergent groups of cichlid fishes. The 24 species that we will focus on are listed in the table below.
+
+<center>
+
+| ID                       | Species                   | Group                |
+|--------------------------|---------------------------|----------------------|
+| Oreochromis_niloticus    | *Oreochromis niloticus*   | African cichlids     |
+| Heterochromis_multidensA | *Heterochromis multidens* | African cichlids     |
+| Cichla_temensisA         | *Cichla temensis*         | Neotropical cichlids |
+| Heros_appendictulatusA   | *Heros appendictulatus*   | Neotropical cichlids |
+| Etroplus_maculatusA      | *Etroplus maculatus*      | Indian cichlids      |
+| Oryzias_latipes          | *Oryzias latipes*         | Atherinomorphae      |
+| Trachinotus_carolinusA   | *Trachinotus carolinus*   | Carangaria           |
+| Channa_striataA          | *Channa striata*          | Anabantiformes       |
+| Monopterus_albusA        | *Monopterus albus*        | Synbranchiformes     |
+| Gasterosteus_acuC        | *Gasterosteus aculeatus*  | Eupercaria           |
+| Astrapogon_stellatusA    | *Astrapogon tellatus*     | Gobiaria             |
+| Aulostomus_chinensisA    | *Aulostomus chinensis*    | Syngnatharia         |
+| Thunnus_albacaresA       | *Thunnus albacares*       | Pelagaria            |
+| Porichthys_notatusA      | *Porichthys notatus*      | Batrachoidiaria      |
+| Diplacanthopoma_brunneaA | *Diplacanthopoma brunnea* | Ophidiaria           |
+| Sargocentron_cornutumA   | *Sargocentron cornutum*   | Holocentrimorphaceae |
+| Rondeletia_loricataA     | *Rondeletia loricata*     | Beryciformes         |
+| Monocentris_japonicaA    | *Monocentris japonica*    | Trachichthyiformes   |
+| Polymixia_japonicaA      | *Polymixia japonica*      | Polymixiipterygii    |
+| Regalecus_Glesne         | *Regalecus glesne*        | Lampripterygii       |
+| Percopsis_omiscomaycusA  | *Percopsis omiscomaycus*  | Percopsaria          |
+| Zenopsis_conchiferaB     | *Zenopsis conchifera*     | Zeiariae             |
+| Stylephorus_chordatusB   | *Stylephorus chordatus*   | Stylephoriformes     |
+| Gadus_morhua             | *Gadus morhua*            | Gadiformes           |
+
+</center>
 
 
 -------
