@@ -69,7 +69,7 @@ The approach of CladeAge is similar to the more traditional node-dating approach
 
 As a first step, download the molecular dataset of Near et al. {% cite Near2013 -A --file CladeAge-Tutorial/master-refs.bib %} from the Dryad data repository connected to their publication. On the command-line of a Mac or Linux computer, this could be done using the `wget` utility:
 
-```sh
+```
 wget https://datadryad.org/bitstream/handle/10255/dryad.50839/Near_et_al.nex
 ```
 
@@ -127,6 +127,14 @@ To specify fossil constraints as calibrations points in BEAUti according to the 
 	<a id="fig:beauti1"></a>
 	<img style="width:80%;" src="figures/beauti1.png" alt= BEAUti"">
 	<figcaption>Figure 1: Install the CladeAge package.</figcaption>
+</figure>
+
+Close and reopen BEAUti. You should then see that an additional tab has been added named "Clade Age", as in the screenshot below.
+
+<figure>
+	<a id="fig:beauti1"></a>
+	<img style="width:80%;" src="figures/beauti2.png" alt= BEAUti"">
+	<figcaption>Figure 2: The BEAUti interface after installing the CladeAge package.</figcaption>
 </figure>
 
 
