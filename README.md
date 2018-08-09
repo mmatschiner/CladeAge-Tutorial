@@ -75,7 +75,7 @@ wget https://datadryad.org/bitstream/handle/10255/dryad.50839/Near_et_al.nex
 
 Alternatively, you could use your browser to open the Dryad repository [https://datadryad.org/resource/doi:10.5061/dryad.d3mb4](https://datadryad.org/resource/doi:10.5061/dryad.d3mb4) and download the file `Near_et_al.nex`.
 
-This file in Nexus format contains the sequence alignments for ten nuclear markers, sequenced for 608 species of spiny-rayed fishes. As this dataset is far too large to be analyzed in this tutorial, we'll extract the sequences of 24 species that represent major groups of spiny-rayed fishes {% cite Betancur2017 -A --file CladeAge-Tutorial/master-refs.bib %} as well as the most divergent groups of cichlid fishes. The 24 species that we will focus on are listed in the table below.
+This file in Nexus format contains the sequence alignments for ten nuclear markers, sequenced for 608 species of spiny-rayed fishes. As this dataset is far too large to be analyzed in this tutorial, we'll extract the sequences of 24 species that represent major groups of spiny-rayed fishes {% cite Betancur2017 --file CladeAge-Tutorial/master-refs.bib %} as well as the most divergent groups of cichlid fishes. The 24 species that we will focus on are listed in the table below.
 
 <center>
 
