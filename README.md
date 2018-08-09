@@ -61,7 +61,7 @@ The analyses in this tutorial will be based on the dataset of Near et al. {% cit
 
 ## The CladeAge model
 
-The approach of CladeAge is similar to the more traditional node-dating approach in the sense that prior densities are defined for the ages of different clades, and the minimum ages of these prior densities are provided by the oldest fossils of these clades. However, important differences exist between the CladeAge approach and node dating: First, the shape of age-prior densities is informed by a model of diversification and fossil sampling in the CladeAge approach, whereas in node dating, parametric distributions (e.g. lognormal or gamma) with more or less arbitrarily chosen parameters were usually applied. Second, because of the quantitative model used in the CladeAge approach, the clades used for calibration should also not be chosen at will. Instead, strictly all clades included in the phylogeny that (i) have a fossil record, (ii) are morphologically recognizable, and (iii) have their sister lineage also included in the phylogeny should be constrained according to the age of their oldest fossil. A consequence of this is that clades are constrained even when their known sister lineage has an older fossil record, and that the same fossil may be used to constrain not just one clade, but multiple nested clades, if the more inclusive clades do not have an even older fossil record. More details about these criteria can be found in our paper on CladeAge {% cite Matschiner2017 -A --file CladeAge-Tutorial/master-refs.bib %}, and further information on using CladeAge is given in our [Rough Guide to CladeAge](http://evoinformatics.eu/cladeage.pdf).
+The approach of CladeAge is similar to the more traditional node-dating approach in the sense that prior densities are defined for the ages of different clades, and the minimum ages of these prior densities are provided by the oldest fossils of these clades. However, important differences exist between the CladeAge approach and node dating: First, the shape of age-prior densities is informed by a model of diversification and fossil sampling in the CladeAge approach, whereas in node dating, parametric distributions (e.g. lognormal or gamma) with more or less arbitrarily chosen parameters were usually applied. Second, because of the quantitative model used in the CladeAge approach, the clades used for calibration should also not be chosen at will. Instead, strictly all clades included in the phylogeny that (i) have a fossil record, (ii) are morphologically recognizable, and (iii) have their sister lineage also included in the phylogeny should be constrained according to the age of their oldest fossil. A consequence of this is that clades are constrained even when their known sister lineage has an older fossil record, and that the same fossil may be used to constrain not just one clade, but multiple nested clades, if the more inclusive clades do not have an even older fossil record. More details about these criteria can be found in our paper on CladeAge {% cite Matschiner2017 --file CladeAge-Tutorial/master-refs.bib %}, and further information on using CladeAge is given in our [Rough Guide to CladeAge](http://evoinformatics.eu/cladeage.pdf).
 
 ## Divergence-time estimation with CladeAge
 
@@ -107,6 +107,28 @@ This file in Nexus format contains the sequence alignments for ten nuclear marke
 | Gadus_morhua             | *Gadus morhua*            | Gadiformes           |
 
 </center>
+
+A list of the 24 species IDs in plain text format is also in file `Near_et_al_ids.txt`. On the command line, we can use that file to extract the sequences of these species from the full alignment, and write them to a new file in Nexus format named `Near_et_al_red.nex`:
+
+```sh
+head -n 7 Near_et_al.nex | sed 's/ntax=608/ntax=24/g'> Near_et_al_red.nex
+grep -f Near_et_al_ids.txt -e "\[" Near_et_al.nex | sed -e $'s/\[/\\\n\[/g' >> Near_et_al_red.nex
+tail -n 35 Near_et_al.nex | sed 's/paup/assumptions/g' >> Near_et_al_red.nex
+```
+
+If you should not be able to execute these commands on the command-line, you could instead download the reduced alignment file `Near_et_al_red.nex` using the link in the left-hand column under "Data".
+
+
+### Installing the CladeAge package
+
+To specify fossil constraints as calibrations points in BEAUti according to the CladeAge model of Matschiner et al. {% cite Matschiner2017 -A --file CladeAge-Tutorial/master-refs.bib %}, we'll first have to install the CladeAge add-on package for BEAST2. To do so, open BEAUti, and click on "Manage Packages" in the "File" menu. This will open a window for the BEAST2 Package Manager. In this window, select "CA" and click "Intstall/Upgrade" as shown in the screenshot below.
+
+<figure>
+	<a id="fig:beauti1"></a>
+	<img style="width:25%;" src="figures/beauti1" alt= BEAUti"">
+	<figcaption>Figure 1: Install the CladeAge package.</figcaption>
+</figure>
+
 
 
 -------
