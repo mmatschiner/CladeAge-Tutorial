@@ -81,10 +81,10 @@ This file in Nexus format contains the sequence alignments for ten nuclear marke
 
 | ID                       | Species                   | Group                |
 |--------------------------|---------------------------|----------------------|
-| Oreochromis_niloticus    | *Oreochromis niloticus*   | African cichlids     |
-| Heterochromis_multidensA | *Heterochromis multidens* | African cichlids     |
-| Cichla_temensisA         | *Cichla temensis*         | Neotropical cichlids |
-| Heros_appendictulatusA   | *Heros appendictulatus*   | Neotropical cichlids |
+| Oreochromis_niloticus    | _Oreochromis niloticus_   | African cichlids     |
+| Heterochromis_multidensA | _Heterochromis multidens_ | African cichlids     |
+| Cichla_temensisA         | _Cichla temensis_         | Neotropical cichlids |
+| Heros_appendictulatusA   | _Heros appendictulatus_   | Neotropical cichlids |
 | Etroplus_maculatusA      | *Etroplus maculatus*      | Indian cichlids      |
 | Oryzias_latipes          | *Oryzias latipes*         | Atherinomorphae      |
 | Trachinotus_carolinusA   | *Trachinotus carolinus*   | Carangaria           |
