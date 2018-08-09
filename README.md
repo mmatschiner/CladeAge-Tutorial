@@ -110,7 +110,7 @@ This file in Nexus format contains the sequence alignments for ten nuclear marke
 
 A list of the 24 species IDs in plain text format is also in file `Near_et_al_ids.txt`. On the command line, we can use that file to extract the sequences of these species from the full alignment, and write them to a new file in Nexus format named `Near_et_al_red.nex`:
 
-```bash
+```
 head -n 7 Near_et_al.nex | sed 's/ntax=608/ntax=24/g'> Near_et_al_red.nex
 grep -f Near_et_al_ids.txt -e "\[" Near_et_al.nex | sed -e $'s/\[/\\\n\[/g' >> Near_et_al_red.nex
 tail -n 35 Near_et_al.nex | sed 's/paup/assumptions/g' >> Near_et_al_red.nex
