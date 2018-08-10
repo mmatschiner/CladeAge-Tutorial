@@ -200,7 +200,7 @@ The window should then look as in the next screenshot.
 	<figcaption>Figure 7: Cloning the site model.</figcaption>
 </figure>
 
-> Continue to the "Clock Model" tab, and select the "Relaxed Clock Log Normal" clock model.
+> Continue to the "Clock Model" tab, and select the "Relaxed Clock Log Normal" clock model from the drop-down menu.
 
 <figure>
 	<a id="fig:beauti8"></a>
@@ -216,6 +216,46 @@ Because we are going to calibrate the molecular clock with fossil constraints, w
 	<a id="fig:beauti9"></a>
 	<img style="width:80%;" src="figures/beauti9.png" alt= BEAUti"">
 	<figcaption>Figure 9: Enabling the estimation of the clock rate.</figcaption>
+</figure>
+
+The checkbox for clock-rate estimation should then be enabled.
+
+> Set a tick in the checkbox at the bottom right to estimate the clock rate.
+
+The "Clock Model" tab should then look as shown in the screenshot below.
+
+<figure>
+	<a id="fig:beauti10"></a>
+	<img style="width:80%;" src="figures/beauti10.png" alt= BEAUti"">
+	<figcaption>Figure 10: Selecting estimation of the clock rate.</figcaption>
+</figure>
+
+> Move on to the "Priors" tab. Select the "Birth Death Model" as the tree prior, from the drop-down menu at the very top of the window.
+
+<figure>
+	<a id="fig:beauti11"></a>
+	<img style="width:80%;" src="figures/beauti11.png" alt= BEAUti"">
+	<figcaption>Figure 11: Selecting the tree prior.</figcaption>
+</figure>
+
+Instead of specifying constraints on monophyly and divergence times in the "Priors" tab, this is done in the separate tab named "Clade Ages" when the CladeAge package is installed.
+
+> Open the "Clade Ages" tab and click on the "+ Add Prior" button
+
+<figure>
+	<a id="fig:beauti12"></a>
+	<img style="width:80%;" src="figures/beauti12.png" alt= BEAUti"">
+	<figcaption>Figure 12: Selecting a first taxon set for calibration.</figcaption>
+</figure>
+
+We will now have to specify a rather long list of constraints to make the best possible use of the information provided by the fossil record and to obtain divergence time estimates that are as reliable as possible given our dataset. We'll start simple by specifying that the origin of African cichlid tribe *Heterochromini*, represented in our dataset by *Heterochromis multidens*, must have occurred at least 15.97-33.9 million years ago (Ma), since this is the age of the oldest fossil of Heterochromi, which was reported from the Baid Formation of Saudi Arabia by Lippitsch and Micklich {% cite Lippitsch1998 -A --file CladeAge-Tutorial/master-refs.bib %}.
+
+> Specify "Heterochromini" in the field next to "Taxon set label", and select only "Heterochromis\_multidensA" as the ingroup of this taxon set.
+
+<figure>
+	<a id="fig:beauti13"></a>
+	<img style="width:80%;" src="figures/beauti13.png" alt= BEAUti"">
+	<figcaption>Figure 13: Selecting a first taxon set for Heterochromini.</figcaption>
 </figure>
 
 
