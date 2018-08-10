@@ -392,6 +392,21 @@ As you'll see, I just arbitrarily specified for most branches a length of 10 mil
 		</init>
 ```
 
+> Replace the above block with the code below, which contains the starting tree string.
+
+```
+		<init spec="beast.util.TreeParser" id="NewickTree.t:enc_1st"
+			initial="@Tree.t:enc_1st"
+			IsLabelledNewick="true"
+			newick="((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)">
+			<taxa id="ZIC_2nd" spec="FilteredAlignment" data="@Near_et_al_red" filter="7697-8576\3"/>
+		</init>
+```
+
+> Save the file after adding the tree string, open it again in BEAST2, and try running the analysis again. This time, the MCMC should begin to run.
+
+Depending on the speed of your computer, this analysis will take XXX-XXX. You could cancel the BEAST2 analysis after some time if you don't want to wait for it to finish, and you could instead continue the rest of tutorial with the prepared results that you'll find in files `Near_et_al_red.log` and `Near_et_al_red.trees` (see links to these files in the menu to the left).
+
 -------
 
 # Tutorial style guide
