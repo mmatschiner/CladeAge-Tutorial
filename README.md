@@ -192,6 +192,32 @@ The window should then look as in the next screenshot.
 	<figcaption>Figure 6: Selecting settings for model averaging with the bModelTest model.</figcaption>
 </figure>
 
+> Select all partitions in the list at the left of the window, and click "OK" to clone the site model from the first partition to all other partitions.
+
+<figure>
+	<a id="fig:beauti7"></a>
+	<img style="width:80%;" src="figures/beauti7.png" alt= BEAUti"">
+	<figcaption>Figure 7: Cloning the site model.</figcaption>
+</figure>
+
+> Continue to the "Clock Model" tab, and select the "Relaxed Clock Log Normal" clock model.
+
+<figure>
+	<a id="fig:beauti8"></a>
+	<img style="width:80%;" src="figures/beauti8.png" alt= BEAUti"">
+	<figcaption>Figure 8: Selecting the clock model.</figcaption>
+</figure>
+
+Because we are going to calibrate the molecular clock with fossil constraints, we should allow the clock rate to be estimated. By default, however, the checkbox that we would need to tick, next to "estimate" at the bottom right, is disabled.
+
+> To enable this checkbox, click on "Automatic set clock rate" in BEAUti's "Mode" menu.
+
+<figure>
+	<a id="fig:beauti9"></a>
+	<img style="width:80%;" src="figures/beauti9.png" alt= BEAUti"">
+	<figcaption>Figure 9: Enabling the estimation of the clock rate.</figcaption>
+</figure>
+
 
 -------
 
