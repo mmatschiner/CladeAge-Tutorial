@@ -258,7 +258,7 @@ We will now have to specify a rather long list of constraints to make the best p
 	<figcaption>Figure 13: Selecting a first taxon set for Heterochromini.</figcaption>
 </figure>
 
-After you click "OK", you'll see the following window, in which you can specify minimum and maximum values for the parameters net diversification rate, turnover rate, and sampling rate. Based on these values as well as the fossil age, the CladeAge model is going to automatically determine the optimal shape of the prior density used for each constraint.
+After you click "OK", you'll see the window shown below, in which you can specify minimum and maximum values for the parameters net diversification rate, turnover rate, and sampling rate. Based on these values as well as the fossil age, the CladeAge model is going to automatically determine the optimal shape of the prior density used for each constraint.
 
 <figure>
 	<a id="fig:beauti14"></a>
@@ -290,6 +290,19 @@ You'll see four more fields in which you can specify minimum and maximum values 
 	<figcaption>Figure 16: Specifying further parameters for the Heterochromini calibration.</figcaption>
 </figure>
 
+It is also possible to preview the shape of the prior densities as calculated by CladeAge based on the specified parameters.
+
+> Click on the "Preview" button below the CladeAge icon on the right (you may have to increase the window size to see it).
+
+A plot outlining the prior densities should then appear as in the screenshot below.
+
+<figure>
+	<a id="fig:beauti17"></a>
+	<img style="width:80%;" src="figures/beauti17.png" alt= BEAUti"">
+	<figcaption>Figure 17: Previewing the prior density for the Heterochromini calibration.</figcaption>
+</figure>
+
+From this plot, you can see that under the assumption that all specified model parameters are correct, there's a good probability that Heterochromini originated some time between 25 and 80 Ma. While this range is rather wide, it is based on only one fossil; we will obtain more precise estimates when we run the phylogenetic analysis with multiple fossil constraints.
 
 -------
 
