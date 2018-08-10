@@ -258,6 +258,38 @@ We will now have to specify a rather long list of constraints to make the best p
 	<figcaption>Figure 13: Selecting a first taxon set for Heterochromini.</figcaption>
 </figure>
 
+After you click "OK", you'll see the following window, in which you can specify minimum and maximum values for the parameters net diversification rate, turnover rate, and sampling rate. Based on these values as well as the fossil age, the CladeAge model is going to automatically determine the optimal shape of the prior density used for each constraint.
+
+<figure>
+	<a id="fig:beauti14"></a>
+	<img style="width:80%;" src="figures/beauti14.png" alt= BEAUti"">
+	<figcaption>Figure 14: Specifying parameters for CladeAge calibrations.</figcaption>
+</figure>
+
+While it might sometimes be preferable to estimate the net diversification (speciation minus extinction) and turnover (extinction divided by speciation) rates as part of the analysis, this is not implemented in the CladeAge model yet. Instead, the values for the two parameters have to be specified _a priori_, together with the "sampling rate", the rate at which fossils that are eventually sampled by scientists were once deposited in the fossil record. Fortunately, estimates for these three rates can be found in the literature, and the confidence intervals for these estimates can be accounted for by the CladeAge model. Here, as in Matschiner et al. {% cite Matschiner2017 -A --file CladeAge-Tutorial/master-refs.bib %}, we adopt teleost-specific estimates for net diversification and turnover from Santini et al. {% cite Santini2009 -A --file CladeAge-Tutorial/master-refs.bib %}, and a sampling-rate estimate for bony fishes from Foote and Miller {% cite Foote2007 -A --file CladeAge-Tutorial/master-refs.bib %}. These estimates are 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate. 
+
+> Specify 0.041-0.081 for the net diversification rate, 0.0011-0.37 for the turnover, and 0.0066-0.01806 for the sampling rate. Don't change the selection of "empirical CladeAge" in the drop-down menu to the left.
+
+<figure>
+	<a id="fig:beauti15"></a>
+	<img style="width:80%;" src="figures/beauti15.png" alt= BEAUti"">
+	<figcaption>Figure 15: Specifying parameters for CladeAge calibrations.</figcaption>
+</figure>
+
+While these three rate estimates are going to apply to all fossil constraints, information specific to the fossil constraint still must be added.
+
+> To add more information specific to the Heterochromini constraint, click on the triangle to the left of "Heterochromini".
+
+You'll see four more fields in which you can specify minimum and maximum values for the "First occurrence age" (the age of the oldest fossil of the clade) and a "Sampling gap". This sampling gap is supposed to represent a period of time right after the origin of the clade during which one might assume that either fossilization is unlikely (for example because the clade's population might still be too small) or that fossils would not be recognized as belonging to that clade (because it might not have evolved diagnostic characters yet). We are going to ignore the possibility of a sampling gap here.
+
+> Specify the known age of the oldest fossil of Heterochromini in million of years, 15.97-33.9.
+
+<figure>
+	<a id="fig:beauti16"></a>
+	<img style="width:80%;" src="figures/beauti16.png" alt= BEAUti"">
+	<figcaption>Figure 16: Specifying further parameters for the Heterochromini calibration.</figcaption>
+</figure>
+
 
 -------
 
