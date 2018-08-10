@@ -306,10 +306,43 @@ From this plot, you can see that under the assumption that all specified model p
 
 > Click the triangle to the left of "Heterochromini" again to close the section with details on this fossil constraint.
 >
-> Add further fossil constraints for the following clades (see the Supplementary Material of Matschiner et al. {% cite Matschiner2017 -A --file CladeAge-Tutorial/master-refs.bib %} if interested in details and references):
+> Add further fossil constraints for each of the clades listed below (see the Supplementary Material of Matschiner et al. {% cite Matschiner2017 -A --file CladeAge-Tutorial/master-refs.bib %} if interested in details and references):
 
 * **"Other African cichlid tribes"**<br>Ingroup: *Oreochromis niloticus* ("Oreochromis\_niloticus")<br>Oldest fossil species: *Mahengechromis* spp.<br>First occurrence age: 45.0-46.0 Ma
 * **"African cichlids"**<br>Ingroup: *Heterochromis multidens* ("Heterochromis\_multidensA"), *Oreochromis niloticus* ("Oreochromis\_niloticus")<br>Oldest fossil species: *Mahengechromis* spp.<br>First occurrence age: 45.0-46.0 Ma
+* **"Retroculini and Cichlini"**<br>Ingroup: *Cichla temensis* ("Cichla\_temensisA")<br>Oldest fossil species: *Palaeocichla longirostrum*<br>First occurrence age: 5.332-23.03 Ma
+* **"Other Neotropical cichlid tribes"**<br>Ingroup: *Heros appendictulatus* ("Heros\_appendictulatusA")<br>Oldest fossil species: *Plesioheros chauliodus*<br>First occurrence age: 39.9-45.0 Ma
+* **"Neotropical cichlids"**<br>Ingroup: *Cichla temensis* ("Cichla\_temensisA"), *Heros appendictulatus* ("Heros\_appendictulatusA")<br>Oldest fossil species: *Plesioheros chauliodus*<br>First occurrence age: 39.9-45.0 Ma
+* **"Afro-American cichlids"**<br>Ingroup: *Cichla temensis* ("Cichla\_temensisA"), *Heros appendictulatus* ("Heros\_appendictulatusA"), *Heterochromis multidens* ("Heterochromis\_multidensA"), *Oreochromis niloticus* ("Oreochromis\_niloticus")<br>Oldest fossil species: *Mahengechromis* spp.<br>First occurrence age: 45.0-46.0 Ma
+* **"Cichlids"**<br>*Cichla temensis* ("Cichla\_temensisA"), *Etroplus maculatus* ("Etroplus\_maculatusA"), *Heros appendictulatus* ("Heros\_appendictulatusA"), *Heterochromis multidens* ("Heterochromis\_multidensA"), *Oreochromis niloticus* ("Oreochromis\_niloticus")<br>Oldest fossil species: *Mahengechromis* spp.<br>First occurrence age: 45.0-46.0 Ma
+* **"Atherinomorphae"**<br>Ingroup: *Oryzias latipes* ("Oryzias\_latipes")<br>Oldest fossil species: *Rhamphexocoetus volans*<br>First occurrence age: 49.1-49.4 Ma
+* **"Ovalentaria"**<br>Ingroup: *Cichla temensis* ("Cichla\_temensisA"), *Etroplus maculatus* ("Etroplus\_maculatusA"), *Heros appendictulatus* ("Heros\_appendictulatusA"), *Heterochromis multidens* ("Heterochromis\_multidensA"), *Oreochromis niloticus* ("Oreochromis\_niloticus"), *Oryzias latipes* ("Oryzias\_latipes")<br>Oldest fossil species: *Rhamphexocoetus volans*<br>First occurrence age: 49.1-49.4 Ma
+* **"Carangaria"**<br>Ingroup: *Trachinotus carolinus* ("Trachinotus\_carolinusA")<br>Oldest fossil species: *Trachicaranx tersus*<br>First occurrence age: 55.8-57.23 Ma
+* **"Anabantiformes"**<br>Ingroup: *Channa striata* ("Channa\_striataA")<br>Oldest fossil species: *Osphronemus goramy*<br>First occurrence age: 45.5-50.7 Ma
+* **"Anabantaria"**<br>Ingroup: *Channa striata* ("Channa\_striataA"), *Monopterus albus* ("Monopterus\_albusA")<br>Oldest fossil species: *Osphronemus goramy*<br>First occurrence age: 45.5-50.7 Ma
+* **"Eupercaria"**<br>Ingroup: *Gasterosteus aculeatus* ("Gasterosteus_acuC")<br>Oldest fossil species: *Cretatriacanthus guidottii*<br>First occurrence age: 83.5-99.6 Ma
+* **"Gobiaria"**<br>Ingroup: *Astrapogon tellatus* ("Astrapogon\_stellatusA")<br>Oldest fossil species: *"Gobius" gracilis*<br>First occurrence age: 30.7-33.9 Ma
+* **"Syngnatharia"**<br>Ingroup: *Aulostomus chinensis* ("Aulostomus\_chinensisA")<br>Oldest fossil species: *Prosolenostomus lessinii*<br>First occurrence age: 49.1-49.4 Ma
+* **"Pelagaria"**<br>Ingroup: *Thunnus albacares* ("Thunnus\_albacaresA")<br>Oldest fossil species: *Eutrichiurides opiensis*<br>First occurrence age: 56.6-66.043 Ma
+* **"Batrachoidiaria"**<br>Ingroup: *Porichthys notatus* ("Porichthys\_notatusA")<br>Oldest fossil species: *Louckaichthys novosadi*<br>First occurrence age: 27.82-33.9 Ma
+* **"Ophidiaria"**<br>Ingroup: *Diplacanthopoma brunnea* ("Diplacanthopoma\_brunneaA")<br>Oldest fossil species: *Eolamprogrammus senectus*<br>First occurrence age: 55.8-57.23 Ma
+* **"Percomorphaceae"**<br>Ingroup: *Astrapogon tellatus* ("Astrapogon\_stellatusA"), *Aulostomus chinensis* ("Aulostomus\_chinensisA"), *Channa striata* ("Channa\_striataA"), *Cichla temensis* ("Cichla\_temensisA"), *Diplacanthopoma brunnea* ("Diplacanthopoma\_brunneaA"), *Etroplus maculatus* ("Etroplus\_maculatusA"), *Gasterosteus aculeatus* ("Gasterosteus_acuC"), *Heros appendictulatus* ("Heros\_appendictulatusA"), *Heterochromis multidens* ("Heterochromis\_multidensA"), *Monopterus albus* ("Monopterus\_albusA"), *Oreochromis niloticus* ("Oreochromis\_niloticus"), *Oryzias latipes* ("Oryzias\_latipes"), *Porichthys notatus* ("Porichthys\_notatusA"), *Thunnus albacares* ("Thunnus\_albacaresA"), *Trachinotus carolinus* ("Trachinotus\_carolinusA")<br>Oldest fossil species: *Cretatriacanthus guidottii*<br>First occurrence age: 83.5-99.6 Ma
+* **"Holocentrimorphaceae"**<br>Ingroup: *Sargocentron cornutum* (Sargocentron\_cornutumA)<br>Oldest fossil species: *Caproberyx pharsus*<br>First occurrence age: 97.8-99.1 Ma
+* **"Acanthopterygii"**<br>Ingroup: *Astrapogon tellatus* ("Astrapogon\_stellatusA"), *Aulostomus chinensis* ("Aulostomus\_chinensisA"), *Channa striata* ("Channa\_striataA"), *Cichla temensis* ("Cichla\_temensisA"), *Diplacanthopoma brunnea* ("Diplacanthopoma\_brunneaA"), *Etroplus maculatus* ("Etroplus\_maculatusA"), *Gasterosteus aculeatus* ("Gasterosteus_acuC"), *Heros appendictulatus* ("Heros\_appendictulatusA"), *Heterochromis multidens* ("Heterochromis\_multidensA"), *Monocentris japonica* ("Monocentris\_japonicaA"), *Monopterus albus* ("Monopterus\_albusA"), *Oreochromis niloticus* ("Oreochromis\_niloticus"), *Oryzias latipes* ("Oryzias\_latipes"), *Porichthys notatus* ("Porichthys\_notatusA"), *Rondeletia loricata* ("Rondeletia\_loricataA"), *Thunnus albacares* ("Thunnus\_albacaresA"), *Trachinotus carolinus* ("Trachinotus\_carolinusA"), *Sargocentron cornutum* (Sargocentron\_cornutumA)<br>Oldest fossil species: *Caproberyx pharsus*<br>First occurrence age: 97.8-99.1 Ma
+* **"Polymixiipterygii"**<br>Ingroup: *Polymixia japonica* ("Polymixia\_japonicaA")<br>Oldest fossil species: *Homonotichthys rotundus*<br>First occurrence age: 93.5-96.0 Ma
+* **"Percopsaria"**<br>Ingroup: *Percopsis omiscomaycus* ("Percopsis\_omiscomaycusA")<br>Oldest fossil species: *Mcconichthys longipinnis*<br>First occurrence age: 61.1-66.043 Ma
+* **"Zeiariae"**<br>Ingroup: *Zenopsis conchifera* ("Zenopsis\_conchiferaB")<br>Oldest fossil species: *Cretazeus rinaldii*<br>First occurrence age: 69.2-76.4 Ma
+* **"Gadiformes"**<br>Ingroup: *Gadus morhua* ("Gadus\_morhua")<br>Oldest fossil species: *Protacodus* sp.<br>First occurrence age: 59.7-62.8 Ma
+* **"Paracanthopterygii"**<br>Ingroup: *Gadus morhua* ("Gadus\_morhua"), *Percopsis omiscomaycus* ("Percopsis\_omiscomaycusA"), *Stylephorus chordatus* ("Stylephorus\_chordatusB"), *Zenopsis conchifera* ("Zenopsis\_conchiferaB")<br>Oldest fossil species: *Cretazeus rinaldii*<br>First occurrence age: 69.2-76.4 Ma
+
+Once all these constraints are added, the BEAUti window should look as shown below.
+
+<figure>
+	<a id="fig:beauti18"></a>
+	<img style="width:80%;" src="figures/beauti18.png" alt= BEAUti"">
+	<figcaption>Figure 18: Adding all calibrations.</figcaption>
+</figure>
+
 
 -------
 
