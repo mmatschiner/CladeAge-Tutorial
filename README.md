@@ -121,7 +121,7 @@ If you should not be able to execute these commands on the command line, you cou
 
 ### Installing the CladeAge package
 
-To use fossil constraints as calibrations points according to the CladeAge model, we'll first have to install the CladeAge add-on package for BEAST2. To do so, open BEAUti, and click on "Manage Packages" in the "File" menu. This will open a window for the BEAST2 Package Manager. In this window, select "CA" and click "Intstall/Upgrade" as shown in the screenshot below.
+To use fossil constraints as calibrations points according to the CladeAge model, we'll first have to install the CladeAge add-on package for BEAST2. To do so, open BEAUti, and click on "Manage Packages" in the "File" menu. This will open a window for the BEAST2 Package Manager. In this window, select "CA" and click "Install/Upgrade" as shown in the screenshot below.
 
 <figure>
 	<a id="fig:beauti1"></a>
@@ -129,7 +129,7 @@ To use fossil constraints as calibrations points according to the CladeAge model
 	<figcaption>Figure 1: Install the CladeAge package.</figcaption>
 </figure>
 
-Close and reopen BEAUti. You should then see that an additional tab has been added named "Clade Age", as in the screenshot below.
+Close and reopen BEAUti. You should then see that an additional tab has been added named "Clade Ages", as in the screenshot below.
 
 <figure>
 	<a id="fig:beauti2"></a>
@@ -148,7 +148,23 @@ Click on "Import Alignment" in BEAUti's "File" menu, and select the alignment fi
 	<figcaption>Figure 3: The BEAUti interface after importing the alignment file.</figcaption>
 </figure>
 
+Select all partitions, and click "Link Trees" as well as "Link Clock Models", as shown below.
 
+<figure>
+	<a id="fig:beauti4"></a>
+	<img style="width:80%;" src="figures/beauti4.png" alt= BEAUti"">
+	<figcaption>Figure 4: Linking trees and clock models.</figcaption>
+</figure>
+
+Move on to the "Site Model" tab to select the site model for all partitions. Instead of selecting a model such as HKY or GTR, I highly recommend the use of the model averaging implemented in the bModelTest package. If you did not already install this package, you can do so with the BEAST2 Package Manager from BEAUti as described above for the installation of the CladeAge package (don't forget to close and reopen BEAUti after installation to see changes to the interface). More information on model averaging with the bModelTest package is provided in the [Substitution Model Averaging](https://taming-the-beast.org/tutorials/Substitution-model-averaging/) tutorial. While recommended, model averaging with bModelTest is not required for this CladeAge tutorial, and you could also pick a model such as HKY or GTR instead. The description given here, however, assumes that the bModelTest package has been installed.
+
+Select "BEAST Model Test" from the drop-down menu at the top of the window, as shown below.
+
+<figure>
+	<a id="fig:beauti5"></a>
+	<img style="width:80%;" src="figures/beauti5.png" alt= BEAUti"">
+	<figcaption>Figure 5: Selecting the site model.</figcaption>
+</figure>
 
 
 -------
