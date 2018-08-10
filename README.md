@@ -177,7 +177,19 @@ Instead of selecting a model such as HKY or GTR, I highly recommend the use of t
 <figure>
 	<a id="fig:beauti5"></a>
 	<img style="width:80%;" src="figures/beauti5.png" alt= BEAUti"">
-	<figcaption>Figure 5: Selecting the site model.</figcaption>
+	<figcaption>Figure 5: Selecting model averaging with the bModelTest model.</figcaption>
+</figure>
+
+> Select "namedSelected" from the drop-down menu that at first had "transitionTransversionSplit" selected.
+> Leave the checkbox next to "Empirical" unticked to allow estimation of nucleotide frequencies.
+> Then, set the tick to the right of "Mutation Rate" to specify that this rate should be estimated.
+
+The window should then look as in the next screenshot.
+
+<figure>
+	<a id="fig:beauti6"></a>
+	<img style="width:80%;" src="figures/beauti6.png" alt= BEAUti"">
+	<figcaption>Figure 6: Selecting settings for model averaging with the bModelTest model.</figcaption>
 </figure>
 
 
