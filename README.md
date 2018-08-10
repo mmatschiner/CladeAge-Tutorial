@@ -359,7 +359,7 @@ Open BEAST2, load file `Near_et_al_red.xml`, and try running the MCMC analysis.
 
 <figure>
 	<a id="fig:beast1"></a>
-	<img style="width:80%;" src="figures/beast1.png" alt="BEAST">
+	<img style="width:50%;" src="figures/beast1.png" alt="BEAST">
 	<figcaption>Figure 20: Starting the BEAST analysis.</figcaption>
 </figure>
 
@@ -367,8 +367,8 @@ Most likely, the MCMC analysis is going to crash right at the start with an erro
 
 <figure>
 	<a id="fig:beast2"></a>
-	<img style="width:80%;" src="figures/beast2.png" alt="BEAST">
-	<figcaption>Figure 20: Error message due to failure to initialise the MCMC chain.</figcaption>
+	<img style="width:50%;" src="figures/beast2.png" alt="BEAST">
+	<figcaption>Figure 21: Error message due to failure to initialise the MCMC chain.</figcaption>
 </figure>
 
 This is a common problem when several fossil constraints are specified: According to the error message, BEAST2 could not find a proper state to initialise. This means that even after several attempts, no starting state of the MCMC chain could be found that had a non-zero probability. Most often, the issue is that the tree that BEAST2 randomly generates to start the chain is in conflict with one or more fossil constraints. Unfortunately, the only way to fix this issue is to manually edit the XML file and specify a starting tree that is in agreement with the specified fossil constraints. In particular, because all fossil constraints imposed hard minimum ages on the origin of the respective clades, this clades must at least be as old as this minimum age in the starting tree. In case of doubt, it is usually safer to make the starting tree too old rather than too young, the course of the MCMC chain should, at least after the burnin, not be influenced by the starting state anymore anyway. Some helpful advice on how to specify starting trees is provided on the [BEAST2](https://www.beast2.org/fix-starting-tree/) webpage. With trees of hundreds of taxa, generating a suitable starting tree can be a tricky task in itself, but with the small number of 24 species used here, writing a starting tree by hand is feasible.
@@ -379,6 +379,18 @@ This is a common problem when several fossil constraints are specified: Accordin
 ((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)
 ```
 
+As you'll see, I just arbitrarily specified for most branches a length of 10 million years, and I made sure that particularly the more recent divergence events agree with the respective fossil constraints (e.g. by placing the divergence of *Oreochromis niloticus* and *Heterochromis multidens* at 50 Ma because the origin of the clade "Other African cichlid tribes", represented by *Oreochromis niloticus* is constrained to be at least 45 Ma).
+
+> Open file `Near_et_al_red.xml` in a text editor and find the block shown below on lines 335-340.
+
+```
+		<init id="RandomTree.t:ZIC_2nd" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@Tree.t:enc_1st">
+			<taxa id="ZIC_2nd" spec="FilteredAlignment" data="@Near_et_al_red" filter="7697-8576\3"/>
+			<populationModel id="ConstantPopulation0.t:ZIC_2nd" spec="ConstantPopulation">
+				<parameter id="randomPopSize.t:ZIC_2nd" name="popSize">1.0</parameter>
+			</populationModel>
+		</init>
+```
 
 -------
 
