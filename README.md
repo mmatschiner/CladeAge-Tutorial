@@ -112,7 +112,7 @@ This file in Nexus format contains the sequence alignments for ten nuclear marke
 
 A list of the 24 species IDs in plain text format is also in file `Near_et_al_ids.txt`. On the command line, we can use that file to extract the sequences of these species from the full alignment, and write them to a new file in Nexus format named `Near_et_al_red.nex`.
 
-> Execute the following commands on the command line:
+> Execute the following commands on the command line, after placing file `Near_et_al_ids.txt` in the same directory as `Near_et_al.nex`:
 
 ```
 head -n 7 Near_et_al.nex | sed 's/ntax=608/ntax=24/g'> Near_et_al_red.nex
@@ -120,7 +120,7 @@ grep -f Near_et_al_ids.txt -e "\[" Near_et_al.nex | sed -e $'s/\[/\\\n\[/g' >> N
 tail -n 35 Near_et_al.nex | sed 's/paup/assumptions/g' >> Near_et_al_red.nex
 ```
 
-If you should not be able to execute these commands on the command line, you could instead download the reduced alignment file `Near_et_al_red.nex` using the link in the left-hand column under "Data".
+If you should not be able to execute these commands on the command line, you could instead download the reduced alignment file `Near_et_al_red.nex` using the link in the left-hand menu under "Data".
 
 
 ### Installing the CladeAge package
@@ -180,7 +180,7 @@ Instead of selecting a model such as HKY or GTR, I highly recommend the use of t
 	<figcaption>Figure 5: Selecting model averaging with the bModelTest model.</figcaption>
 </figure>
 
-> Select "namedSelected" from the drop-down menu that at first had "transitionTransversionSplit" selected.
+> Select "namedExtended" from the drop-down menu that at first had "transitionTransversionSplit" selected.
 > Leave the checkbox next to "Empirical" unticked to allow estimation of nucleotide frequencies.
 > Then, set the tick to the right of "Mutation Rate" to specify that this rate should be estimated.
 
@@ -343,7 +343,7 @@ Once all these constraints are added, the BEAUti window should look as shown bel
 	<figcaption>Figure 18: Adding all calibrations.</figcaption>
 </figure>
 
-> Move on to the "MCMC" tab. Specify again an MCMC chain length of 100 million iterations, name the log file `Near_et_al_red.log` and the tree file `Near_et_al_red.trees`.
+> Move on to the "MCMC" tab. Specify an MCMC chain length of 100 million iterations, name the log file `Near_et_al_red.log` and the tree file `Near_et_al_red.trees`, and use a log frequency of 10,000 for both of these output files.
 
 The BEAUti window should then look as in the next screenshot.
 
@@ -354,6 +354,9 @@ The BEAUti window should then look as in the next screenshot.
 </figure>
 
 > Save the analysis settings to a new file named `Near_et_al_red.xml` by clicking "Save As" in BEAUti's "File" menu.
+
+
+### Running the BEAST2 analysis
 
 Open BEAST2, load file `Near_et_al_red.xml`, and try running the MCMC analysis.
 
@@ -381,13 +384,12 @@ This is a common problem when several fossil constraints are specified: Accordin
 
 As you'll see, I just arbitrarily specified for most branches a length of 10 million years, and I made sure that particularly the more recent divergence events agree with the respective fossil constraints (e.g. by placing the divergence of *Oreochromis niloticus* and *Heterochromis multidens* at 50 Ma because the origin of the clade "Other African cichlid tribes", represented by *Oreochromis niloticus* is constrained to be at least 45 Ma).
 
-> Open file `Near_et_al_red.xml` in a text editor and find the block shown below on lines 335-340.
+> Open file `Near_et_al_red.xml` in a text editor and find the block shown below on lines 337-341.
 
 ```
-		<init id="RandomTree.t:ZIC_2nd" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@Tree.t:enc_1st">
-			<taxa id="ZIC_2nd" spec="FilteredAlignment" data="@Near_et_al_red" filter="7697-8576\3"/>
-			<populationModel id="ConstantPopulation0.t:ZIC_2nd" spec="ConstantPopulation">
-				<parameter id="randomPopSize.t:ZIC_2nd" name="popSize">1.0</parameter>
+		<init id="RandomTree.t:enc_1st" spec="beast.evolution.tree.RandomTree" estimate="false" initial="@Tree.t:enc_1st" taxa="@enc_1st">
+			<populationModel id="ConstantPopulation0.t:enc_1st" spec="ConstantPopulation">
+				<parameter id="randomPopSize.t:enc_1st" name="popSize">1.0</parameter>
 			</populationModel>
 		</init>
 ```
@@ -398,14 +400,65 @@ As you'll see, I just arbitrarily specified for most branches a length of 10 mil
 		<init spec="beast.util.TreeParser" id="NewickTree.t:enc_1st"
 			initial="@Tree.t:enc_1st"
 			IsLabelledNewick="true"
+			taxa="@enc_1st"
 			newick="((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)">
-			<taxa id="ZIC_2nd" spec="FilteredAlignment" data="@Near_et_al_red" filter="7697-8576\3"/>
 		</init>
 ```
 
 > Save the file after adding the tree string, open it again in BEAST2, and try running the analysis again. This time, the MCMC should begin to run.
 
-Depending on the speed of your computer, this analysis will take XXX-XXX. You could cancel the BEAST2 analysis after some time if you don't want to wait for it to finish, and you could instead continue the rest of tutorial with the prepared results that you'll find in files `Near_et_al_red.log` and `Near_et_al_red.trees` (see links to these files in the menu to the left).
+Depending on the speed of your computer, this analysis will take half a day or longer. You could cancel the BEAST2 analysis after some time if you don't want to wait for it to finish, and you could instead continue the rest of tutorial with the prepared results that you'll find in files `Near_et_al_red.log` and `Near_et_al_red.trees` (see links to these files in the menu to the left).
+
+
+### Interpreting the analysis results
+
+We are now going to use the program Tracer to assess stationarity of the MCMC chain produced by the analyses with CladeAge.
+
+> Open Tracer and the log file `Near_et_al_red.log` resulting from the analysis with CladeAge.
+
+The Tracer window should then look as shown in the next screenshot.
+
+<figure>
+	<a id="fig:tracer1"></a>
+	<img style="width:80%;" src="figures/tracer1.png" alt="BEAST">
+	<figcaption>Figure 22: Analyzing results with Tracer.</figcaption>
+</figure>
+
+> Quickly browse through the long list of parameters to see if any have particularly low ESS values.
+
+We'll ignore those parameters of the bModelTest model named "hasEqualFreqs...". Besides these, the lowest ESS values are probably around 80, indicating that the chain is approaching stationarity, but that it should be run for more iterations for a complete and publishable analysis. Nevertheless, the degree of stationarity appears to be sufficient for our interpretation here.
+
+> To see a good example of the "hairy caterpillar" trace pattern indicating stationarity, click on "prior" in the list of parameters and on the tab for "Trace" in the top right of the window.
+
+You should see a trace as shown below.
+
+<figure>
+	<a id="fig:tracer2"></a>
+	<img style="width:80%;" src="figures/tracer2.png" alt="BEAST">
+	<figcaption>Figure 23: Analyzing results with Tracer.</figcaption>
+</figure>
+
+Note that in principle all traces should look similar to this pattern, with ESS values greater than 200, once the chain is fully stationary.
+
+> Find the "TreeHeight" parameter indicating the root age in the list on the left.
+> 
+> **Question 3:** What is the mean estimate and its confidence interval for the age of the first split in the phylogeny? [(see answer)](#q1)
+
+
+## Answers to questions
+
+<a name="q1"></a>
+
+* **Question 1:** When you select "TreeHeight" in the list on the left and click on the tab for "Estimates" in the top right, you'll see the following information:
+
+<figure>
+	<a id="fig:tracer3"></a>
+	<img style="width:80%;" src="figures/tracer3.png" alt="BEAST">
+	<figcaption>Figure XXX: Analyzing results with Tracer.</figcaption>
+</figure>
+
+As specified in the summary statistics on the top right part of the window, the mean estimate for the age of the first split should be around 160 Ma. The confidence interval is reported as the "95% HPD interval", the highest-posterior-density interval containing 95% of the posterior distribution. In other words, this is the shortest interval within which 95% of the samples taken by the MCMC can be found. In this case, it is relatively wide, ranging from around 125 Ma to about 225 Ma.
+
 
 -------
 
