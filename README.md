@@ -133,7 +133,7 @@ This will open a window for the BEAST2 Package Manager. In this window, select "
 
 <figure>
 	<a id="fig:beauti1"></a>
-	<img style="width:80%;" src="figures/beauti1.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti1.png" alt="BEAUti">
 	<figcaption>Figure 1: Install the CladeAge package.</figcaption>
 </figure>
 
@@ -143,7 +143,7 @@ You should then see that an additional tab has been added named "Clade Ages", as
 
 <figure>
 	<a id="fig:beauti2"></a>
-	<img style="width:80%;" src="figures/beauti2.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti2.png" alt="BEAUti">
 	<figcaption>Figure 2: The BEAUti interface after installing the CladeAge package.</figcaption>
 </figure>
 
@@ -156,7 +156,7 @@ BEAUti should then recognize 30 different partitions, one for each codon positio
 
 <figure>
 	<a id="fig:beauti3"></a>
-	<img style="width:80%;" src="figures/beauti3.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti3.png" alt="BEAUti">
 	<figcaption>Figure 3: The BEAUti interface after importing the alignment file.</figcaption>
 </figure>
 
@@ -164,7 +164,7 @@ BEAUti should then recognize 30 different partitions, one for each codon positio
 
 <figure>
 	<a id="fig:beauti4"></a>
-	<img style="width:80%;" src="figures/beauti4.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti4.png" alt="BEAUti">
 	<figcaption>Figure 4: Linking trees and clock models.</figcaption>
 </figure>
 
@@ -176,7 +176,7 @@ Instead of selecting a model such as HKY or GTR, I highly recommend the use of t
 
 <figure>
 	<a id="fig:beauti5"></a>
-	<img style="width:80%;" src="figures/beauti5.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti5.png" alt="BEAUti">
 	<figcaption>Figure 5: Selecting model averaging with the bModelTest model.</figcaption>
 </figure>
 
@@ -188,7 +188,7 @@ The window should then look as in the next screenshot.
 
 <figure>
 	<a id="fig:beauti6"></a>
-	<img style="width:80%;" src="figures/beauti6.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti6.png" alt="BEAUti">
 	<figcaption>Figure 6: Selecting settings for model averaging with the bModelTest model.</figcaption>
 </figure>
 
@@ -196,7 +196,7 @@ The window should then look as in the next screenshot.
 
 <figure>
 	<a id="fig:beauti7"></a>
-	<img style="width:80%;" src="figures/beauti7.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti7.png" alt="BEAUti">
 	<figcaption>Figure 7: Cloning the site model.</figcaption>
 </figure>
 
@@ -204,7 +204,7 @@ The window should then look as in the next screenshot.
 
 <figure>
 	<a id="fig:beauti8"></a>
-	<img style="width:80%;" src="figures/beauti8.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti8.png" alt="BEAUti">
 	<figcaption>Figure 8: Selecting the clock model.</figcaption>
 </figure>
 
@@ -214,7 +214,7 @@ Because we are going to calibrate the molecular clock with fossil constraints, w
 
 <figure>
 	<a id="fig:beauti9"></a>
-	<img style="width:80%;" src="figures/beauti9.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti9.png" alt="BEAUti">
 	<figcaption>Figure 9: Enabling the estimation of the clock rate.</figcaption>
 </figure>
 
@@ -226,7 +226,7 @@ The "Clock Model" tab should then look as shown in the screenshot below.
 
 <figure>
 	<a id="fig:beauti10"></a>
-	<img style="width:80%;" src="figures/beauti10.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti10.png" alt="BEAUti">
 	<figcaption>Figure 10: Selecting estimation of the clock rate.</figcaption>
 </figure>
 
@@ -234,7 +234,7 @@ The "Clock Model" tab should then look as shown in the screenshot below.
 
 <figure>
 	<a id="fig:beauti11"></a>
-	<img style="width:80%;" src="figures/beauti11.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti11.png" alt="BEAUti">
 	<figcaption>Figure 11: Selecting the tree prior.</figcaption>
 </figure>
 
@@ -244,7 +244,7 @@ Instead of specifying constraints on monophyly and divergence times in the "Prio
 
 <figure>
 	<a id="fig:beauti12"></a>
-	<img style="width:80%;" src="figures/beauti12.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti12.png" alt="BEAUti">
 	<figcaption>Figure 12: Selecting a first taxon set for calibration.</figcaption>
 </figure>
 
@@ -254,7 +254,7 @@ We will now have to specify a rather long list of constraints to make the best p
 
 <figure>
 	<a id="fig:beauti13"></a>
-	<img style="width:80%;" src="figures/beauti13.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti13.png" alt="BEAUti">
 	<figcaption>Figure 13: Selecting a first taxon set for Heterochromini.</figcaption>
 </figure>
 
@@ -262,7 +262,7 @@ After you click "OK", you'll see the window shown below, in which you can specif
 
 <figure>
 	<a id="fig:beauti14"></a>
-	<img style="width:80%;" src="figures/beauti14.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti14.png" alt="BEAUti">
 	<figcaption>Figure 14: Specifying parameters for CladeAge calibrations.</figcaption>
 </figure>
 
@@ -272,7 +272,7 @@ While it might sometimes be preferable to estimate the net diversification (spec
 
 <figure>
 	<a id="fig:beauti15"></a>
-	<img style="width:80%;" src="figures/beauti15.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti15.png" alt="BEAUti">
 	<figcaption>Figure 15: Specifying parameters for CladeAge calibrations.</figcaption>
 </figure>
 
@@ -286,7 +286,7 @@ You'll see four more fields in which you can specify minimum and maximum values 
 
 <figure>
 	<a id="fig:beauti16"></a>
-	<img style="width:80%;" src="figures/beauti16.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti16.png" alt="BEAUti">
 	<figcaption>Figure 16: Specifying further parameters for the Heterochromini calibration.</figcaption>
 </figure>
 
@@ -298,7 +298,7 @@ A plot outlining the prior densities should then appear as in the screenshot bel
 
 <figure>
 	<a id="fig:beauti17"></a>
-	<img style="width:80%;" src="figures/beauti17.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti17.png" alt="BEAUti">
 	<figcaption>Figure 17: Previewing the prior density for the Heterochromini calibration.</figcaption>
 </figure>
 
@@ -339,9 +339,45 @@ Once all these constraints are added, the BEAUti window should look as shown bel
 
 <figure>
 	<a id="fig:beauti18"></a>
-	<img style="width:80%;" src="figures/beauti18.png" alt= BEAUti"">
+	<img style="width:80%;" src="figures/beauti18.png" alt="BEAUti">
 	<figcaption>Figure 18: Adding all calibrations.</figcaption>
 </figure>
+
+> Move on to the "MCMC" tab. Specify again an MCMC chain length of 100 million iterations, name the log file `Near_et_al_red.log` and the tree file `Near_et_al_red.trees`.
+
+The BEAUti window should then look as in the next screenshot.
+
+<figure>
+	<a id="fig:beauti19"></a>
+	<img style="width:80%;" src="figures/beauti19.png" alt="BEAUti">
+	<figcaption>Figure 19: Specifying chain length and output.</figcaption>
+</figure>
+
+> Save the analysis settings to a new file named `Near_et_al_red.xml` by clicking "Save As" in BEAUti's "File" menu.
+
+Open BEAST2, load file `Near_et_al_red.xml`, and try running the MCMC analysis.
+
+<figure>
+	<a id="fig:beast1"></a>
+	<img style="width:80%;" src="figures/beast1.png" alt="BEAST">
+	<figcaption>Figure 20: Starting the BEAST analysis.</figcaption>
+</figure>
+
+Most likely, the MCMC analysis is going to crash right at the start with an error message as shown below.
+
+<figure>
+	<a id="fig:beast2"></a>
+	<img style="width:80%;" src="figures/beast2.png" alt="BEAST">
+	<figcaption>Figure 20: Error message due to failure to initialise the MCMC chain.</figcaption>
+</figure>
+
+This is a common problem when several fossil constraints are specified: According to the error message, BEAST2 could not find a proper state to initialise. This means that even after several attempts, no starting state of the MCMC chain could be found that had a non-zero probability. Most often, the issue is that the tree that BEAST2 randomly generates to start the chain is in conflict with one or more fossil constraints. Unfortunately, the only way to fix this issue is to manually edit the XML file and specify a starting tree that is in agreement with the specified fossil constraints. In particular, because all fossil constraints imposed hard minimum ages on the origin of the respective clades, this clades must at least be as old as this minimum age in the starting tree. In case of doubt, it is usually safer to make the starting tree too old rather than too young, the course of the MCMC chain should, at least after the burnin, not be influenced by the starting state anymore anyway. Some helpful advice on how to specify starting trees is provided on the [BEAST2](https://www.beast2.org/fix-starting-tree/) webpage. With trees of hundreds of taxa, generating a suitable starting tree can be a tricky task in itself, but with the small number of 24 species used here, writing a starting tree by hand is feasible.
+
+> Copy and paste the below starting tree string into a new FigTree window.
+
+```
+((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)
+```
 
 
 -------
