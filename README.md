@@ -67,7 +67,9 @@ The approach of CladeAge is similar to the more traditional node-dating approach
 
 ### Preparing the molecular dataset
 
-As a first step, download the molecular dataset of Near et al. {% cite Near2013 -A --file CladeAge-Tutorial/master-refs.bib %} from the Dryad data repository connected to their publication. On the command-line of a Mac or Linux computer, this could be done using the `wget` utility:
+As a first step, download the molecular dataset of Near et al. {% cite Near2013 -A --file CladeAge-Tutorial/master-refs.bib %} from the Dryad data repository connected to their publication. On the command-line of a Mac or Linux computer, this could be done using the `wget` utility.
+
+> Execute the following command:
 
 ```
 wget https://datadryad.org/bitstream/handle/10255/dryad.50839/Near_et_al.nex
@@ -108,7 +110,9 @@ This file in Nexus format contains the sequence alignments for ten nuclear marke
 
 </center>
 
-A list of the 24 species IDs in plain text format is also in file `Near_et_al_ids.txt`. On the command line, we can use that file to extract the sequences of these species from the full alignment, and write them to a new file in Nexus format named `Near_et_al_red.nex`:
+A list of the 24 species IDs in plain text format is also in file `Near_et_al_ids.txt`. On the command line, we can use that file to extract the sequences of these species from the full alignment, and write them to a new file in Nexus format named `Near_et_al_red.nex`.
+
+> Execute the following commands on the command line:
 
 ```
 head -n 7 Near_et_al.nex | sed 's/ntax=608/ntax=24/g'> Near_et_al_red.nex
@@ -121,7 +125,11 @@ If you should not be able to execute these commands on the command line, you cou
 
 ### Installing the CladeAge package
 
-To use fossil constraints as calibrations points according to the CladeAge model, we'll first have to install the CladeAge add-on package for BEAST2. To do so, open BEAUti, and click on "Manage Packages" in the "File" menu. This will open a window for the BEAST2 Package Manager. In this window, select "CA" and click "Install/Upgrade" as shown in the screenshot below.
+To use fossil constraints as calibrations points according to the CladeAge model, we'll first have to install the CladeAge add-on package for BEAST2.
+
+> To do so, open BEAUti, and click on "Manage Packages" in the "File" menu.
+ 
+This will open a window for the BEAST2 Package Manager. In this window, select "CA" and click "Install/Upgrade" as shown in the screenshot below.
 
 <figure>
 	<a id="fig:beauti1"></a>
@@ -129,7 +137,9 @@ To use fossil constraints as calibrations points according to the CladeAge model
 	<figcaption>Figure 1: Install the CladeAge package.</figcaption>
 </figure>
 
-Close and reopen BEAUti. You should then see that an additional tab has been added named "Clade Ages", as in the screenshot below.
+> Close and reopen BEAUti.
+
+You should then see that an additional tab has been added named "Clade Ages", as in the screenshot below.
 
 <figure>
 	<a id="fig:beauti2"></a>
@@ -140,7 +150,9 @@ Close and reopen BEAUti. You should then see that an additional tab has been add
 
 ### Generating the analysis file with BEAUti
 
-Click on "Import Alignment" in BEAUti's "File" menu, and select the alignment file `Near_et_al_red.nex`. BEAUti should then recognize 30 different partitions, one for each codon position of each of the ten markers. The BEAUti window should then look as shown in the screenshot below.
+> Click on "Import Alignment" in BEAUti's "File" menu, and select the alignment file `Near_et_al_red.nex`.
+
+BEAUti should then recognize 30 different partitions, one for each codon position of each of the ten markers. The BEAUti window should then look as shown in the screenshot below.
 
 <figure>
 	<a id="fig:beauti3"></a>
@@ -148,7 +160,7 @@ Click on "Import Alignment" in BEAUti's "File" menu, and select the alignment fi
 	<figcaption>Figure 3: The BEAUti interface after importing the alignment file.</figcaption>
 </figure>
 
-Select all partitions, and click "Link Trees" as well as "Link Clock Models", as shown below.
+> Select all partitions, and click "Link Trees" as well as "Link Clock Models", as shown below.
 
 <figure>
 	<a id="fig:beauti4"></a>
@@ -156,9 +168,11 @@ Select all partitions, and click "Link Trees" as well as "Link Clock Models", as
 	<figcaption>Figure 4: Linking trees and clock models.</figcaption>
 </figure>
 
-Move on to the "Site Model" tab to select the site model for all partitions. Instead of selecting a model such as HKY or GTR, I highly recommend the use of the model averaging implemented in the bModelTest package. If you did not already install this package, you can do so with the BEAST2 Package Manager from BEAUti as described above for the installation of the CladeAge package (don't forget to close and reopen BEAUti after installation to see changes to the interface). More information on model averaging with the bModelTest package is provided in the [Substitution Model Averaging](https://taming-the-beast.org/tutorials/Substitution-model-averaging/) tutorial. While recommended, model averaging with bModelTest is not required for this CladeAge tutorial, and you could also pick a model such as HKY or GTR instead. The description given here, however, assumes that the bModelTest package has been installed.
+> Move on to the "Site Model" tab to select the site model for all partitions.
 
-Select "BEAST Model Test" from the drop-down menu at the top of the window, as shown below.
+Instead of selecting a model such as HKY or GTR, I highly recommend the use of the model averaging implemented in the bModelTest package {% cite Bouckaert2017 --file CladeAge-Tutorial/master-refs.bib %}. If you did not already install this package, you can do so with the BEAST2 Package Manager from BEAUti as described above for the installation of the CladeAge package (don't forget to close and reopen BEAUti after installation to see changes to the interface). More information on model averaging with the bModelTest package is provided in the [Substitution Model Averaging](https://taming-the-beast.org/tutorials/Substitution-model-averaging/) tutorial. While recommended, model averaging with bModelTest is not required for this CladeAge tutorial, and you could also pick a model such as HKY or GTR instead. The description given here, however, assumes that the bModelTest package has been installed.
+
+> Select "BEAST Model Test" from the drop-down menu at the top of the window, as shown below.
 
 <figure>
 	<a id="fig:beauti5"></a>
