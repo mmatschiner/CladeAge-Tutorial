@@ -464,8 +464,9 @@ These should look similar to those shown in the screenshot below.
 	<figcaption>Figure 25: Analyzing results with Tracer.</figcaption>
 </figure>
 
-**Question 2:** How to these estimates compare to those that we used to define prior densities for fossil calibrations with the CladeAge approach? [(see answer)](#q2)
+**Question 2:** How do these estimates compare to those that we used to define prior densities for fossil calibrations with the CladeAge approach? [(see answer)](#q2)
 	
+<br><br><br><br><br><br><br><br>
 	
 ## Answers to questions
 
@@ -484,84 +485,9 @@ These should look similar to those shown in the screenshot below.
 
 -------
 
-# Tutorial style guide
-
-## Text styling
-
-This is how to write _italic text_.
-
-This is how to write **bold text**.
-
-This is how to write **_bold and italic text_**.
-
-Do text superscripts like this 7^th, x^2y or  x^(2y + 3z).
-
-
-## Lists
-
-### Unnumbered lists
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- Integer pharetra arcu ut nisl mollis ultricies.
-	- Fusce nec tortor at enim cursus dictum.
-	- Phasellus nec urna quis velit eleifend convallis sodales nec augue.
-- In iaculis turpis in massa facilisis, quis ultricies nibh ultricies.
-- Nam vitae turpis eu lacus imperdiet mollis id at augue.
-- Sed sed turpis ac dolor mollis accumsan.
-
-
-### Numbered lists
-
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-2. Integer pharetra arcu ut nisl mollis ultricies.
-	1. Fusce nec tortor at enim cursus dictum.
-	2. Phasellus nec urna quis velit eleifend convallis sodales nec augue.
-1. In iaculis turpis in massa facilisis, quis ultricies nibh ultricies.
-1. Nam vitae turpis eu lacus imperdiet mollis id at augue.
-1. Sed sed turpis ac dolor mollis accumsan.
-
-### Mixed lists
-
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-2. Integer pharetra arcu ut nisl mollis ultricies.
-	* Fusce nec tortor at enim cursus dictum.
-	* Phasellus nec urna quis velit eleifend convallis sodales nec augue.
-1. In iaculis turpis in massa facilisis, quis ultricies nibh ultricies.
-1. Nam vitae turpis eu lacus imperdiet mollis id at augue.
-1. Sed sed turpis ac dolor mollis accumsan.
-
-
-
-## Instruction boxes
-
-Use block-quotes for step-by-step instruction that the user should perform (this will produce a framed box on the website):
-
-> The data we have is not the data we want, and the data we need is not the data we have.
-> 
-> We can input **any** formatted text in here:
->
-> - Even
-> - Lists
->
-> or equations:
->
-> {% eq (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right) %}
-
-
-
-----
-
 # Useful Links
 
+- [Rough Guide to CladeAge](http://evoinformatics.eu/cladeage.pdf)
 - [Bayesian Evolutionary Analysis with BEAST 2](http://www.beast2.org/book.html) {% cite BEAST2book2014 --file CladeAge-Tutorial/master-refs.bib %}
 - BEAST 2 website and documentation: [http://www.beast2.org/](http://www.beast2.org/)
 - BEAST 1 website and documentation: [http://beast.bio.ed.ac.uk](http://beast.bio.ed.ac.uk)
