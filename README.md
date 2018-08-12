@@ -442,22 +442,18 @@ Note that in principle all traces should look similar to this pattern, with ESS 
 
 > Find the "TreeHeight" parameter indicating the root age in the list on the left.
 > 
-> **Question 3:** What is the mean estimate and its confidence interval for the age of the first split in the phylogeny? [(see answer)](#q1)
+> **Question 1:** What is the mean estimate and its confidence interval for the age of the first split in the phylogeny? [(see answer)](#q1)
 
 
 ## Answers to questions
 
 <a name="q1"></a>
 
-* **Question 1:** When you select "TreeHeight" in the list on the left and click on the tab for "Estimates" in the top right, you'll see the following information:
-
-<figure>
+* **Question 1:** When you select "TreeHeight" in the list on the left and click on the tab for "Estimates" in the top right, you'll see the following information:<figure>
 	<a id="fig:tracer3"></a>
 	<img style="width:80%;" src="figures/tracer3.png" alt="BEAST">
 	<figcaption>Figure XXX: Analyzing results with Tracer.</figcaption>
-</figure>
-
-As specified in the summary statistics on the top right part of the window, the mean estimate for the age of the first split should be around 160 Ma. The confidence interval is reported as the "95% HPD interval", the highest-posterior-density interval containing 95% of the posterior distribution. In other words, this is the shortest interval within which 95% of the samples taken by the MCMC can be found. In this case, it is relatively wide, ranging from around 125 Ma to about 225 Ma.
+</figure>As specified in the summary statistics on the top right part of the window, the mean estimate for the age of the first split should be around 160 Ma. The confidence interval is reported as the "95% HPD interval", the highest-posterior-density interval containing 95% of the posterior distribution. In other words, this is the shortest interval within which 95% of the samples taken by the MCMC can be found. In this case, it is relatively wide, ranging from around 125 Ma to about 225 Ma.
 
 
 -------
