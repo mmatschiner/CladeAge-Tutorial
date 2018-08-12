@@ -440,20 +440,46 @@ You should see a trace as shown below.
 
 Note that in principle all traces should look similar to this pattern, with ESS values greater than 200, once the chain is fully stationary.
 
-> Find the "TreeHeight" parameter indicating the root age in the list on the left.
-> 
-> **Question 1:** What is the mean estimate and its confidence interval for the age of the first split in the phylogeny? [(see answer)](#q1)
+> Select the "TreeHeight" parameter indicating the root age in the list on the left.
 
+**Question 1:** What is the mean estimate and its confidence interval for the age of the first split in the phylogeny? [(see answer)](#q1)
 
+> Next, find the estimated divergence time between African and Neotropical cichlid fishes. To do so, scroll to the bottom of the list on the left, select "mrcatime(Afro-American cichlids)".
+
+You'll see that this divergence event was estimated around 65 Ma, with a range of uncertainty between around 55 Ma and 75 Ma, as shown in the next screenshot.
+
+<figure>
+	<a id="fig:tracer4"></a>
+	<img style="width:80%;" src="figures/tracer4.png" alt="BEAST">
+	<figcaption>Figure 24: Analyzing results with Tracer.</figcaption>
+</figure>
+
+> Finally, select the speciation-rate parameter named "BDBirthRate" from the list on the left to see the summary statistics for this parameter.
+
+These should look similar to those shown in the screenshot below.
+
+<figure>
+	<a id="fig:tracer5"></a>
+	<img style="width:80%;" src="figures/tracer5.png" alt="BEAST">
+	<figcaption>Figure 25: Analyzing results with Tracer.</figcaption>
+</figure>
+
+**Question 2:** How to these estimates compare to those that we used to define prior densities for fossil calibrations with the CladeAge approach? [(see answer)](#q2)
+	
+	
 ## Answers to questions
 
 <a name="q1"></a>
 
-* **Question 1:** When you select "TreeHeight" in the list on the left and click on the tab for "Estimates" in the top right, you'll see the following information:<figure>
+- **Question 1:** When you select "TreeHeight" in the list on the left and click on the tab for "Estimates" in the top right, you'll see the following information:<figure>
 	<a id="fig:tracer3"></a>
 	<img style="width:80%;" src="figures/tracer3.png" alt="BEAST">
-	<figcaption>Figure XXX: Analyzing results with Tracer.</figcaption>
+	<figcaption>Figure A1: Analyzing results with Tracer.</figcaption>
 </figure>As specified in the summary statistics on the top right part of the window, the mean estimate for the age of the first split should be around 160 Ma. The confidence interval is reported as the "95% HPD interval", the highest-posterior-density interval containing 95% of the posterior distribution. In other words, this is the shortest interval within which 95% of the samples taken by the MCMC can be found. In this case, it is relatively wide, ranging from around 125 Ma to about 225 Ma.
+
+<a name="q2"></a>
+
+- **Question 2:** The estimated speciation rate is far lower than the values that we assumed when we specified prior densities for clade ages with CladeAge. Recall that we had used the estimates for the net diversification rate from Santini et al. {% cite Santini2009 -A --file CladeAge-Tutorial/master-refs.bib %}, which were 0.041-0.081 (per millon year). Thus, the estimated speciation of around 0.0009 is almost an order of magnitude lower than the values that we had assumed for the net diversification rate. This is remarkable because the speciation rate should always be higher than the net diversification rate, given that the latter is defined as the difference between the speciation and extinction rates. The explanation for this difference is that BEAST2 estimated the speciation rate under the assumption that the species that we included in the phylogeny are in fact all the extant species that descended from the root of the phylogeny. This means that BEAST2 assumed that no spiny-rayed fish species besides those 24 included in the phylogeny exist. On the other hand the estimates for the net diversification rate obtained by {% cite Santini2009 -A --file CladeAge-Tutorial/master-refs.bib %} accounted for the fact that only a subset of the living species were included in their phylogeny. Thus, the speciation-rate estimate resulting from our analysis is most certainly a severe underestimate. This bias, however, should not lead to strong bias in the timeline inferred in the analysis with CladeAge, because it did not influence the prior densities placed on clade ages.
 
 
 -------
@@ -505,69 +531,6 @@ Do text superscripts like this 7^th, x^2y or  x^(2y + 3z).
 1. Sed sed turpis ac dolor mollis accumsan.
 
 
-## Figures
-
-
-<figure>
-	<a id="fig:example1"></a>
-	<img style="width:25%;" src="figures/Logo_bw.png" alt="">
-	<figcaption>Figure 1: This figure is 25% of the page width.</figcaption>
-</figure>
-
-
-<figure>
-	<a id="fig:example2"></a>
-	<img style="width:10%;" src="figures/Logo_bw.png" alt="">
-	<figcaption>Figure 2: This figure is only 10% of the page width.</figcaption>
-</figure>
-
-
-
-# Code
-
-A bit of inline monospaced font can be made `like this`. Larger code blocks can be made by using the code environment:
-
-Java:
-
-```java
-public class HelloWorld {
-
-    public static void main(String[] args) {
-        // Prints "Hello, World" to the terminal window.
-        System.out.println("Hello, World");
-    }
-
-}
-```
-
-XML:
-
-```xml
-	<BirthDeathSkylineModel spec="BirthDeathSkylineModel" id="birthDeath" tree="@tree" contemp="true">
-	      <parameter name="origin" id="origin" value ="100" lower="0."/>    
-	      <parameter name="R0" id="R0" value="2" lower="0." dimension ="10"/>
-	      <parameter name="becomeUninfectiousRate" id="becomeUninfectiousRate" value="1" lower="0." dimension ="10"/>
-	      <parameter name="samplingProportion" id="samplingProportion" value="0."/>
-	      <parameter name="rho" id="rho" value="1e-6" lower="0." upper="1."/>
-	</BirthDeathSkylineModel>
-```
-
-R:
-
-```R
-	> myString <- "Hello, World!"
-	> print (myString)
-	[1] "Hello, World!"
-```
-
-# Equations
-
-Inline equations: {% eqinline \dot{x} = \sigma(y-x) %}
-
-Displayed equations: 
-{% eq \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) %}
-
-
 
 ## Instruction boxes
 
@@ -593,21 +556,6 @@ Use block-quotes for step-by-step instruction that the user should perform (this
       y_n
     \end{array} \right) %}
 
-
-
-
-
-
-# Hyperlinks
-
-Add links to figures like this: 
-
-- [Figure 1](#fig:example1) is 25% of the page width.
-- [Figure 2](#fig:example2) is 10% of the page width. 
-
-Add links to external URLs like [this](http://www.google.com). 
-
-Links to equations or different sections within the same document are a little buggy.
 
 
 ----
