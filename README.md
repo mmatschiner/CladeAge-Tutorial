@@ -412,7 +412,7 @@ Depending on the speed of your computer, this analysis will take half a day or l
 
 ### Interpreting the analysis results
 
-We are now going to use the program Tracer to assess stationarity of the MCMC chain produced by the analyses with CladeAge.
+We are now going to use the program Tracer to assess stationarity of the MCMC produced by the analyses with CladeAge.
 
 > Open Tracer and the log file `Near_et_al_red.log` resulting from the analysis with CladeAge.
 
@@ -428,14 +428,26 @@ The Tracer window should then look as shown in the next screenshot.
 
 We'll ignore those parameters of the bModelTest model named "hasEqualFreqs...". Besides these, the lowest ESS values are probably around 80, indicating that the chain is approaching stationarity, but that it should be run for more iterations for a complete and publishable analysis. Nevertheless, the degree of stationarity appears to be sufficient for our interpretation here.
 
-> To see a good example of the "hairy caterpillar" trace pattern indicating stationarity, click on "prior" in the list of parameters and on the tab for "Trace" in the top right of the window.
+> With "posterior" selected in the list of parameters, click on "Trace" in the top right of the window.
 
-You should see a trace as shown below.
+You should see that after a steep increase at the very beginning of the MCMC, the posterior has remained more or less stationary after state 1E7 (10 million).
 
 <figure>
 	<a id="fig:tracer2"></a>
 	<img style="width:80%;" src="figures/tracer2.png" alt="BEAST">
 	<figcaption>Figure 23: Analyzing results with Tracer.</figcaption>
+</figure>
+
+This suggest that considering the first 10% of the chain as "burn-in" is appropriate for this analysis.
+
+> To see a better example of a "hairy caterpillar" trace pattern indicating good stationarity, click on "prior" in the list of parameters and on the tab for "Trace" in the top right of the window.
+
+You should see a trace as shown below.
+
+<figure>
+	<a id="fig:tracer3"></a>
+	<img style="width:80%;" src="figures/tracer3.png" alt="BEAST">
+	<figcaption>Figure 24: Analyzing results with Tracer.</figcaption>
 </figure>
 
 Note that in principle all traces should look similar to this pattern, with ESS values greater than 200, once the chain is fully stationary.
@@ -449,9 +461,9 @@ Note that in principle all traces should look similar to this pattern, with ESS 
 You'll see that this divergence event was estimated around 65 Ma, with a range of uncertainty between around 55 Ma and 75 Ma, as shown in the next screenshot.
 
 <figure>
-	<a id="fig:tracer4"></a>
-	<img style="width:80%;" src="figures/tracer4.png" alt="BEAST">
-	<figcaption>Figure 24: Analyzing results with Tracer.</figcaption>
+	<a id="fig:tracer5"></a>
+	<img style="width:80%;" src="figures/tracer5.png" alt="BEAST">
+	<figcaption>Figure 25: Analyzing results with Tracer.</figcaption>
 </figure>
 
 > Finally, select the speciation-rate parameter named "BDBirthRate" from the list on the left to see the summary statistics for this parameter.
@@ -459,9 +471,9 @@ You'll see that this divergence event was estimated around 65 Ma, with a range o
 These should look similar to those shown in the screenshot below.
 
 <figure>
-	<a id="fig:tracer5"></a>
-	<img style="width:80%;" src="figures/tracer5.png" alt="BEAST">
-	<figcaption>Figure 25: Analyzing results with Tracer.</figcaption>
+	<a id="fig:tracer6"></a>
+	<img style="width:80%;" src="figures/tracer6.png" alt="BEAST">
+	<figcaption>Figure 26: Analyzing results with Tracer.</figcaption>
 </figure>
 
 **Question 2:** How do these estimates compare to those that we used to define prior densities for fossil calibrations with the CladeAge approach? [(see answer)](#q2)
@@ -473,8 +485,8 @@ These should look similar to those shown in the screenshot below.
 <a name="q1"></a>
 
 - **Question 1:** When you select "TreeHeight" in the list on the left and click on the tab for "Estimates" in the top right, you'll see the following information:<figure>
-	<a id="fig:tracer3"></a>
-	<img style="width:80%;" src="figures/tracer3.png" alt="BEAST">
+	<a id="fig:tracer4"></a>
+	<img style="width:80%;" src="figures/tracer4.png" alt="BEAST">
 	<figcaption>Figure A1: Analyzing results with Tracer.</figcaption>
 </figure>As specified in the summary statistics on the top right part of the window, the mean estimate for the age of the first split should be around 160 Ma. The confidence interval is reported as the "95% HPD interval", the highest-posterior-density interval containing 95% of the posterior distribution. In other words, this is the shortest interval within which 95% of the samples taken by the MCMC can be found. In this case, it is relatively wide, ranging from around 125 Ma to about 225 Ma.
 

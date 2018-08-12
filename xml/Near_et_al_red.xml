@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood" required="BEAST v2.5.0:bModelTest v1.1.0:CA v1.3.0:BEASTLabs v1.8.0" version="2.5">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><beast beautitemplate='Standard' beautistatus='noAutoSetClockRate' namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood" required="BEAST v2.5.0:bModelTest v1.1.0:CA v1.3.0:BEASTLabs v1.8.0" version="2.5">
 
 
     <data id="Near_et_al_red">
@@ -335,20 +335,20 @@
     </state>
 
     <init spec="beast.util.TreeParser" id="NewickTree.t:enc_1st"
-        initial="@Tree.t:enc_1st"
-        IsLabelledNewick="true"
-        newick="((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)">
-        <taxa id="ZIC_2nd" spec="FilteredAlignment" data="@Near_et_al_red" filter="7697-8576\3"/>
-    </init>
+			initial="@Tree.t:enc_1st"
+			IsLabelledNewick="true"
+			taxa="@enc_1st"
+			newick="((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)">
+	</init>
 
     <distribution id="posterior" spec="util.CompoundDistribution">
         <distribution id="prior" spec="util.CompoundDistribution">
             <distribution id="BirthDeath.t:enc_1st" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@BDBirthRate.t:enc_1st" relativeDeathRate="@BDDeathRate.t:enc_1st" tree="@Tree.t:enc_1st"/>
             <prior id="BirthRatePrior.t:enc_1st" name="distribution" x="@BDBirthRate.t:enc_1st">
-                <Uniform id="Uniform.7" name="distr" upper="1000.0"/>
+                <Uniform id="Uniform.91" name="distr" upper="1000.0"/>
             </prior>
             <prior id="DeathRatePrior.t:enc_1st" name="distribution" x="@BDDeathRate.t:enc_1st">
-                <Uniform id="Uniform.8" name="distr"/>
+                <Uniform id="Uniform.92" name="distr"/>
             </prior>
             <distribution id="BMT_PropInvariablePrior.s:RAG1_1st" spec="beast.math.distributions.BMTPrior" count="@hasInvariableSites.s:RAG1_1st" x="@BMT_ProportionInvariable.s:RAG1_1st">
                 <Beta id="Beta.0.RAG1_1st" name="distr">
@@ -982,7 +982,7 @@
                 </Exponential>
             </distribution>
             <prior id="MeanRatePrior.c:enc_1st" name="distribution" x="@ucldMean.c:enc_1st">
-                <Uniform id="Uniform.4" name="distr" upper="Infinity"/>
+                <Uniform id="Uniform.90" name="distr" upper="Infinity"/>
             </prior>
             <prior id="ucldStdevPrior.c:enc_1st" name="distribution" x="@ucldStdev.c:enc_1st">
                 <Gamma id="Gamma.0" name="distr">
@@ -1108,7 +1108,8 @@
                 <data id="ZIC_1st" spec="FilteredAlignment" data="@Near_et_al_red" filter="7696-8575\3"/>
                 <siteModel id="BEASTModelTest.s:ZIC_1st" spec="BEASTModelTestSiteModel" gammaCategoryCount="4" hasGammaRates="@hasGammaRates.s:ZIC_1st" hasInvariantSites="@hasInvariableSites.s:ZIC_1st" mutationRate="@BMT_mutationRate.s:ZIC_1st" proportionInvariant="@BMT_ProportionInvariable.s:ZIC_1st" shape="@BMT_gammaShape.s:ZIC_1st" substModel="@RevJump.s:ZIC_1st"/>
             </distribution>
-            <distribution id="treeLikelihood.ZIC_2nd" spec="ThreadedTreeLikelihood" branchRateModel="@RelaxedClock.c:enc_1st" data="@ZIC_2nd" tree="@Tree.t:enc_1st">
+            <distribution id="treeLikelihood.ZIC_2nd" spec="ThreadedTreeLikelihood" branchRateModel="@RelaxedClock.c:enc_1st" tree="@Tree.t:enc_1st">
+                <data id="ZIC_2nd" spec="FilteredAlignment" data="@Near_et_al_red" filter="7697-8576\3"/>
                 <siteModel id="BEASTModelTest.s:ZIC_2nd" spec="BEASTModelTestSiteModel" gammaCategoryCount="4" hasGammaRates="@hasGammaRates.s:ZIC_2nd" hasInvariantSites="@hasInvariableSites.s:ZIC_2nd" mutationRate="@BMT_mutationRate.s:ZIC_2nd" proportionInvariant="@BMT_ProportionInvariable.s:ZIC_2nd" shape="@BMT_gammaShape.s:ZIC_2nd" substModel="@RevJump.s:ZIC_2nd"/>
             </distribution>
             <distribution id="treeLikelihood.ZIC_3rd" spec="ThreadedTreeLikelihood" branchRateModel="@RelaxedClock.c:enc_1st" tree="@Tree.t:enc_1st">
@@ -2079,41 +2080,41 @@
 
     <operator id="DeathRateScaler.t:enc_1st" spec="ScaleOperator" parameter="@BDDeathRate.t:enc_1st" scaleFactor="0.75" weight="3.0"/>
 
-    <logger id="tracelog" fileName="Near_et_al_red.log" logEvery="10000" model="@posterior" sanitiseHeaders="true" sort="smart">
+    <logger id="tracelog" fileName="Near_et_al_red.log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
         <log idref="posterior"/>
         <log idref="likelihood"/>
         <log idref="prior"/>
-        <log idref="treeLikelihood.ZIC_2nd"/>
+        <log idref="treeLikelihood.glyt_1st"/>
         <log idref="treeLikelihood.glyt_2nd"/>
-        <log idref="treeLikelihood.ptr_1st"/>
-        <log idref="treeLikelihood.glyt_3rd"/>
-        <log idref="treeLikelihood.ZIC_3rd"/>
+        <log idref="treeLikelihood.TBR_1st"/>
+        <log idref="treeLikelihood.SREB_1st"/>
         <log idref="treeLikelihood.enc_1st"/>
         <log id="TreeHeight.t:enc_1st" spec="beast.evolution.tree.TreeHeightLogger" tree="@Tree.t:enc_1st"/>
-        <log idref="treeLikelihood.ptr_2nd"/>
-        <log idref="treeLikelihood.RAG1_3rd"/>
-        <log idref="treeLikelihood.ZIC_1st"/>
         <log idref="treeLikelihood.TBR_3rd"/>
-        <log idref="treeLikelihood.plag_3rd"/>
-        <log idref="treeLikelihood.RAG1_1st"/>
-        <log idref="treeLikelihood.ptr_3rd"/>
-        <log idref="treeLikelihood.TBR_2nd"/>
-        <log idref="treeLikelihood.plag_2nd"/>
-        <log idref="treeLikelihood.plag_1st"/>
         <log idref="treeLikelihood.SREB_2nd"/>
-        <log idref="treeLikelihood.SREB_3rd"/>
-        <log idref="treeLikelihood.myh_2nd"/>
+        <log idref="treeLikelihood.glyt_3rd"/>
+        <log idref="treeLikelihood.ZIC_2nd"/>
         <log idref="treeLikelihood.SH3_2nd"/>
-        <log idref="treeLikelihood.TBR_1st"/>
+        <log idref="treeLikelihood.RAG1_1st"/>
+        <log idref="treeLikelihood.SREB_3rd"/>
+        <log idref="treeLikelihood.SH3_1st"/>
+        <log idref="treeLikelihood.plag_2nd"/>
+        <log idref="treeLikelihood.enc_2nd"/>
+        <log idref="treeLikelihood.ptr_2nd"/>
+        <log idref="treeLikelihood.plag_1st"/>
+        <log idref="treeLikelihood.ZIC_1st"/>
+        <log idref="treeLikelihood.enc_3rd"/>
+        <log idref="treeLikelihood.myh_3rd"/>
+        <log idref="treeLikelihood.TBR_2nd"/>
+        <log idref="treeLikelihood.SH3_3rd"/>
+        <log idref="treeLikelihood.ptr_1st"/>
+        <log idref="treeLikelihood.ptr_3rd"/>
+        <log idref="treeLikelihood.ZIC_3rd"/>
         <log idref="treeLikelihood.RAG1_2nd"/>
         <log idref="treeLikelihood.myh_1st"/>
-        <log idref="treeLikelihood.SH3_3rd"/>
-        <log idref="treeLikelihood.glyt_1st"/>
-        <log idref="treeLikelihood.myh_3rd"/>
-        <log idref="treeLikelihood.SH3_1st"/>
-        <log idref="treeLikelihood.SREB_1st"/>
-        <log idref="treeLikelihood.enc_2nd"/>
-        <log idref="treeLikelihood.enc_3rd"/>
+        <log idref="treeLikelihood.plag_3rd"/>
+        <log idref="treeLikelihood.RAG1_3rd"/>
+        <log idref="treeLikelihood.myh_2nd"/>
         <log idref="RevJump.s:enc_1st"/>
         <log idref="BMT_ModelIndicator.s:enc_1st"/>
         <log idref="BMT_Rates.s:enc_1st"/>
@@ -2656,37 +2657,11 @@
         <log idref="BMT_frequencies.s:ZIC_3rd"/>
         <log idref="ucldStdev.c:enc_1st"/>
         <log id="rate.c:enc_1st" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClock.c:enc_1st" tree="@Tree.t:enc_1st"/>
-        <log idref="Heterochromini.fossilprior"/>
-        <log idref="Other African cichlid tribes.fossilprior"/>
-        <log idref="African cichlids.fossilprior"/>
-        <log idref="Retroculini and Cichlini.fossilprior"/>
-        <log idref="Other Neotropical cichlid tribes.fossilprior"/>
-        <log idref="Neotropical cichlids.fossilprior"/>
-        <log idref="Afro-American cichlids.fossilprior"/>
-        <log idref="Cichlids.fossilprior"/>
-        <log idref="Atherinomorphae.fossilprior"/>
-        <log idref="Ovalentaria.fossilprior"/>
-        <log idref="Carangaria.fossilprior"/>
-        <log idref="Anabantiformes.fossilprior"/>
-        <log idref="Anabantaria.fossilprior"/>
-        <log idref="Eupercaria.fossilprior"/>
-        <log idref="Gobiaria.fossilprior"/>
-        <log idref="Syngnatharia.fossilprior"/>
-        <log idref="Pelagaria.fossilprior"/>
-        <log idref="Batrachoidiaria.fossilprior"/>
-        <log idref="Ophidiaria.fossilprior"/>
-        <log idref="Percomorphaceae.fossilprior"/>
-        <log idref="Holocentrimorphaceae.fossilprior"/>
-        <log idref="Acanthopterygii.fossilprior"/>
-        <log idref="Polymixiipterygii.fossilprior"/>
-        <log idref="Percopsaria.fossilprior"/>
-        <log idref="Zeiariae.fossilprior"/>
-        <log idref="Gadiformes.fossilprior"/>
-        <log idref="Paracanthopterygii.fossilprior"/>
         <log idref="ucldMean.c:enc_1st"/>
         <log idref="BirthDeath.t:enc_1st"/>
         <log idref="BDBirthRate.t:enc_1st"/>
         <log idref="BDDeathRate.t:enc_1st"/>
+        <log idref="Heterochromini.fossilprior"/>
     </logger>
 
     <logger id="screenlog" logEvery="1000">
@@ -2696,7 +2671,7 @@
         <log idref="prior"/>
     </logger>
 
-    <logger id="treelog.t:enc_1st" fileName="Near_et_al_red.trees" logEvery="10000" mode="tree">
+    <logger id="treelog.t:enc_1st" fileName="Near_et_al_red.trees" logEvery="1000" mode="tree">
         <log id="TreeWithMetaDataLogger.t:enc_1st" spec="beast.evolution.tree.TreeWithMetaDataLogger" branchratemodel="@RelaxedClock.c:enc_1st" tree="@Tree.t:enc_1st"/>
     </logger>
 
