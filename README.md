@@ -28,15 +28,13 @@ BEAUti2 is a graphical user interface tool for generating BEAST2 XML configurati
 
 Both BEAST2 and BEAUti2 are Java programs, which means that the exact same code runs on all platforms. For us it simply means that the interface will be the same on all platforms. The screenshots used in this tutorial are taken on a Mac OS X computer; however, both programs will have the same layout and functionality on both Windows and Linux. BEAUti2 is provided as a part of the BEAST2 package so you do not need to install it separately.
 
-### TreeAnnotator
-
-TreeAnnotator is used to summarise the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarise and visualise the posterior estimates of other tree parameters (e.g. node height).
-
-TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.
-
 ### Tracer
 
 Tracer ([http://tree.bio.ed.ac.uk/software/tracer](http://tree.bio.ed.ac.uk/software/tracer)) is used to summarize the posterior estimates of the various parameters sampled by the Markov Chain. This program can be used for visual inspection and to assess convergence. It helps to quickly view median estimates and 95% highest posterior density intervals of the parameters, and calculates the effective sample sizes (ESS) of parameters. It can also be used to investigate potential parameter correlations. We will be using Tracer v1.6.0.
+
+### TreeAnnotator
+
+TreeAnnotator is used to summarize the posterior sample of trees to produce a maximum clade credibility tree. It can also be used to summarize and visualize the posterior estimates of other tree parameters (e.g. node height). TreeAnnotator is provided as a part of the BEAST2 package so you do not need to install it separately.
 
 ### FigTree
 
@@ -371,10 +369,10 @@ Most likely, the MCMC analysis is going to crash right at the start with an erro
 <figure>
 	<a id="fig:beast2"></a>
 	<img style="width:50%;" src="figures/beast2.png" alt="BEAST">
-	<figcaption>Figure 21: Error message due to failure to initialise the MCMC chain.</figcaption>
+	<figcaption>Figure 21: Error message due to failure to initialize the MCMC chain.</figcaption>
 </figure>
 
-This is a common problem when several fossil constraints are specified: According to the error message, BEAST2 could not find a proper state to initialise. This means that even after several attempts, no starting state of the MCMC chain could be found that had a non-zero probability. Most often, the issue is that the tree that BEAST2 randomly generates to start the chain is in conflict with one or more fossil constraints. Unfortunately, the only way to fix this issue is to manually edit the XML file and specify a starting tree that is in agreement with the specified fossil constraints. In particular, because all fossil constraints imposed hard minimum ages on the origin of the respective clades, this clades must at least be as old as this minimum age in the starting tree. In case of doubt, it is usually safer to make the starting tree too old rather than too young, the course of the MCMC chain should, at least after the burnin, not be influenced by the starting state anymore anyway. Some helpful advice on how to specify starting trees is provided on the [BEAST2](https://www.beast2.org/fix-starting-tree/) webpage. With trees of hundreds of taxa, generating a suitable starting tree can be a tricky task in itself, but with the small number of 24 species used here, writing a starting tree by hand is feasible.
+This is a common problem when several fossil constraints are specified: According to the error message, BEAST2 could not find a proper state to initialize. This means that even after several attempts, no starting state of the MCMC chain could be found that had a non-zero probability. Most often, the issue is that the tree that BEAST2 randomly generates to start the chain is in conflict with one or more fossil constraints. Unfortunately, the only way to fix this issue is to manually edit the XML file and specify a starting tree that is in agreement with the specified fossil constraints. In particular, because all fossil constraints imposed hard minimum ages on the origin of the respective clades, this clades must at least be as old as this minimum age in the starting tree. In case of doubt, it is usually safer to make the starting tree too old rather than too young, the course of the MCMC chain should, at least after the burnin, not be influenced by the starting state anymore anyway. Some helpful advice on how to specify starting trees is provided on the [BEAST2](https://www.beast2.org/fix-starting-tree/) webpage. With trees of hundreds of taxa, generating a suitable starting tree can be a tricky task in itself, but with the small number of 24 species used here, writing a starting tree by hand is feasible.
 
 > Copy and paste the below starting tree string into a new FigTree window.
 
@@ -410,7 +408,7 @@ As you'll see, I just arbitrarily specified for most branches a length of 10 mil
 Depending on the speed of your computer, this analysis will take half a day or longer. You could cancel the BEAST2 analysis after some time if you don't want to wait for it to finish, and you could instead continue the rest of tutorial with the prepared results that you'll find in files `Near_et_al_red.log` and `Near_et_al_red.trees` (see links to these files in the menu to the left).
 
 
-### Interpreting the analysis results
+### Inspecting the analysis results
 
 We are now going to use the program Tracer to assess stationarity of the MCMC produced by the analyses with CladeAge.
 
@@ -456,7 +454,7 @@ Note that in principle all traces should look similar to this pattern, with ESS 
 
 **Question 1:** What is the mean estimate and its confidence interval for the age of the first split in the phylogeny? [(see answer)](#q1)
 
-> Next, find the estimated divergence time between African and Neotropical cichlid fishes. To do so, scroll to the bottom of the list on the left, select "mrcatime(Afro-American cichlids)".
+> Next, find the estimated divergence time between African and Neotropical cichlid fishes. To do so, scroll to the bottom of the list on the left and select "mrcatime(Afro-American cichlids)".
 
 You'll see that this divergence event was estimated around 65 Ma, with a range of uncertainty between around 55 Ma and 75 Ma, as shown in the next screenshot.
 
@@ -476,7 +474,21 @@ These should look similar to those shown in the screenshot below.
 	<figcaption>Figure 26: Analyzing results with Tracer.</figcaption>
 </figure>
 
-**Question 2:** How do these estimates compare to those that we used to define prior densities for fossil calibrations with the CladeAge approach? [(see answer)](#q2)
+**Question 2:** How do these estimates compare to those that we used to define prior densities for CladeAge calibrations? [(see answer)](#q2)
+	
+
+### Summarizing the posterior tree distribution
+
+While analysis with Tracer has been sufficient to inspect the run stationarity and parameter estimates, we might still want to analyze and visualize the inferred tree itself. One useful method to visualize the entire tree distribution is Densitree {% cite BouckaertHeled2014 --file CladeAge-Tutorial/master-refs.bib %}; this software is distributed together with BEAST2. Alternatively, a single summary tree can be generated with TreeAnnotator as described below.
+
+> Open TreeAnnotator.
+
+<figure>
+	<a id="fig:treeannotator1"></a>
+	<img style="width:60%;" src="figures/treeannotator1.png" alt="TreeAnnotator">
+	<figcaption>Figure 27: Generating a summary tree with TreeAnnotator.</figcaption>
+</figure>
+
 	
 <br><br><br><br><br><br><br><br>
 	
