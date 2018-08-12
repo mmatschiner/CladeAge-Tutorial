@@ -493,15 +493,17 @@ The TreeAnnotator window should then look as shown below.
 
 After clicking "OK", TreeAnnotator will write the maximum-clade-credibility tree to file `Near_et_al_red.tre`. This tree can now be visualized with FigTree.
 
-> Open file `Near_et_al_red.tre` in FigTree. To add a time scale, set a tick next to "Scale Axis" in the menu on the left, then click the triangle next to it. Remove the tick next to "Show grid" and set a tick next to "Reverse axis". To illustrate the uncertainty in divergence-time estimates, select "height_95%_HPD" from the drop-down menu in the "Node Bars" panel.
+> Open file `Near_et_al_red.tre` in FigTree. To add a time scale, set a tick next to "Scale Axis" in the menu on the left, then click the triangle next to it. Remove the tick next to "Show grid" and set a tick next to "Reverse axis". Then, set a tick next to "Node bars", click the triangle to open this panel, and select "height_95%_HPD" from the drop-down menu to illustrate the uncertainty in divergence-time estimates.
 
 The tree should then be shown as in the screenshot below.
 
 <figure>
 	<a id="fig:figtree1"></a>
-	<img style="width:60%;" src="figures/figtree1.png" alt="FigTree">
+	<img style="width:80%;" src="figures/figtree1.png" alt="FigTree">
 	<figcaption>Figure 28: Visualizing the summary tree with FigTree.</figcaption>
 </figure>
+
+
 
 	
 <br><br><br><br><br><br><br><br>
