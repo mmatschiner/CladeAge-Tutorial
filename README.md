@@ -481,12 +481,26 @@ These should look similar to those shown in the screenshot below.
 
 While analysis with Tracer has been sufficient to inspect the run stationarity and parameter estimates, we might still want to analyze and visualize the inferred tree itself. One useful method to visualize the entire tree distribution is Densitree {% cite BouckaertHeled2014 --file CladeAge-Tutorial/master-refs.bib %}; this software is distributed together with BEAST2. Alternatively, a single summary tree can be generated with TreeAnnotator as described below.
 
-> Open TreeAnnotator.
+> Open TreeAnnotator. Set the burn-in percentage to 10% (recall that this was determined to be appropriate based on the MCMC trace for the posterior). As the target tree type, choose "Maximum clade credibility tree" from the drop-down menu, and select "Mean heights" as node heights. Select the `Near_et_al_red.trees` output file of BEAST2 analysis as input tree file, and name the output file `Near_et_al_red.tre`.
+
+The TreeAnnotator window should then look as shown below.
 
 <figure>
 	<a id="fig:treeannotator1"></a>
 	<img style="width:60%;" src="figures/treeannotator1.png" alt="TreeAnnotator">
 	<figcaption>Figure 27: Generating a summary tree with TreeAnnotator.</figcaption>
+</figure>
+
+After clicking "OK", TreeAnnotator will write the maximum-clade-credibility tree to file `Near_et_al_red.tre`. This tree can now be visualized with FigTree.
+
+> Open file `Near_et_al_red.tre` in FigTree. To add a time scale, set a tick next to "Scale Axis" in the menu on the left, then click the triangle next to it. Remove the tick next to "Show grid" and set a tick next to "Reverse axis". To illustrate the uncertainty in divergence-time estimates, select "height_95%_HPD" from the drop-down menu in the "Node Bars" panel.
+
+The tree should then be shown as in the screenshot below.
+
+<figure>
+	<a id="fig:figtree1"></a>
+	<img style="width:60%;" src="figures/figtree1.png" alt="FigTree">
+	<figcaption>Figure 28: Visualizing the summary tree with FigTree.</figcaption>
 </figure>
 
 	
