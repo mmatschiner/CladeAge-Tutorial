@@ -131,7 +131,7 @@ This will open a window for the BEAST2 Package Manager. In this window, select "
 
 <figure>
 	<a id="fig:beauti1"></a>
-	<img style="width:80%;" src="figures/beauti1.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti1.png" alt="BEAUti">
 	<figcaption>Figure 1: Install the CladeAge package.</figcaption>
 </figure>
 
@@ -141,7 +141,7 @@ You should then see that an additional tab has been added named "Clade Ages", as
 
 <figure>
 	<a id="fig:beauti2"></a>
-	<img style="width:80%;" src="figures/beauti2.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti2.png" alt="BEAUti">
 	<figcaption>Figure 2: The BEAUti interface after installing the CladeAge package.</figcaption>
 </figure>
 
@@ -154,7 +154,7 @@ BEAUti should then recognize 30 different partitions, one for each codon positio
 
 <figure>
 	<a id="fig:beauti3"></a>
-	<img style="width:80%;" src="figures/beauti3.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti3.png" alt="BEAUti">
 	<figcaption>Figure 3: The BEAUti interface after importing the alignment file.</figcaption>
 </figure>
 
@@ -162,7 +162,7 @@ BEAUti should then recognize 30 different partitions, one for each codon positio
 
 <figure>
 	<a id="fig:beauti4"></a>
-	<img style="width:80%;" src="figures/beauti4.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti4.png" alt="BEAUti">
 	<figcaption>Figure 4: Linking trees and clock models.</figcaption>
 </figure>
 
@@ -174,7 +174,7 @@ Instead of selecting a model such as HKY or GTR, I highly recommend the use of t
 
 <figure>
 	<a id="fig:beauti5"></a>
-	<img style="width:80%;" src="figures/beauti5.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti5.png" alt="BEAUti">
 	<figcaption>Figure 5: Selecting model averaging with the bModelTest model.</figcaption>
 </figure>
 
@@ -186,7 +186,7 @@ The window should then look as in the next screenshot.
 
 <figure>
 	<a id="fig:beauti6"></a>
-	<img style="width:80%;" src="figures/beauti6.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti6.png" alt="BEAUti">
 	<figcaption>Figure 6: Selecting settings for model averaging with the bModelTest model.</figcaption>
 </figure>
 
@@ -194,7 +194,7 @@ The window should then look as in the next screenshot.
 
 <figure>
 	<a id="fig:beauti7"></a>
-	<img style="width:80%;" src="figures/beauti7.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti7.png" alt="BEAUti">
 	<figcaption>Figure 7: Cloning the site model.</figcaption>
 </figure>
 
@@ -202,7 +202,7 @@ The window should then look as in the next screenshot.
 
 <figure>
 	<a id="fig:beauti8"></a>
-	<img style="width:80%;" src="figures/beauti8.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti8.png" alt="BEAUti">
 	<figcaption>Figure 8: Selecting the clock model.</figcaption>
 </figure>
 
@@ -212,7 +212,7 @@ Because we are going to calibrate the molecular clock with fossil constraints, w
 
 <figure>
 	<a id="fig:beauti9"></a>
-	<img style="width:80%;" src="figures/beauti9.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti9.png" alt="BEAUti">
 	<figcaption>Figure 9: Enabling the estimation of the clock rate.</figcaption>
 </figure>
 
@@ -224,7 +224,7 @@ The "Clock Model" tab should then look as shown in the screenshot below.
 
 <figure>
 	<a id="fig:beauti10"></a>
-	<img style="width:80%;" src="figures/beauti10.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti10.png" alt="BEAUti">
 	<figcaption>Figure 10: Selecting estimation of the clock rate.</figcaption>
 </figure>
 
@@ -232,7 +232,7 @@ The "Clock Model" tab should then look as shown in the screenshot below.
 
 <figure>
 	<a id="fig:beauti11"></a>
-	<img style="width:80%;" src="figures/beauti11.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti11.png" alt="BEAUti">
 	<figcaption>Figure 11: Selecting the tree prior.</figcaption>
 </figure>
 
@@ -242,7 +242,7 @@ Instead of specifying constraints on monophyly and divergence times in the "Prio
 
 <figure>
 	<a id="fig:beauti12"></a>
-	<img style="width:80%;" src="figures/beauti12.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti12.png" alt="BEAUti">
 	<figcaption>Figure 12: Selecting a first taxon set for calibration.</figcaption>
 </figure>
 
@@ -252,7 +252,7 @@ We will now have to specify a rather long list of constraints to make the best p
 
 <figure>
 	<a id="fig:beauti13"></a>
-	<img style="width:80%;" src="figures/beauti13.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti13.png" alt="BEAUti">
 	<figcaption>Figure 13: Selecting a first taxon set for Heterochromini.</figcaption>
 </figure>
 
@@ -260,7 +260,7 @@ After you click "OK", you'll see the window shown below, in which you can specif
 
 <figure>
 	<a id="fig:beauti14"></a>
-	<img style="width:80%;" src="figures/beauti14.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti14.png" alt="BEAUti">
 	<figcaption>Figure 14: Specifying parameters for CladeAge calibrations.</figcaption>
 </figure>
 
@@ -270,7 +270,7 @@ While it might sometimes be preferable to estimate the net diversification (spec
 
 <figure>
 	<a id="fig:beauti15"></a>
-	<img style="width:80%;" src="figures/beauti15.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti15.png" alt="BEAUti">
 	<figcaption>Figure 15: Specifying parameters for CladeAge calibrations.</figcaption>
 </figure>
 
@@ -284,7 +284,7 @@ You'll see four more fields in which you can specify minimum and maximum values 
 
 <figure>
 	<a id="fig:beauti16"></a>
-	<img style="width:80%;" src="figures/beauti16.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti16.png" alt="BEAUti">
 	<figcaption>Figure 16: Specifying further parameters for the Heterochromini calibration.</figcaption>
 </figure>
 
@@ -296,7 +296,7 @@ A plot outlining the prior densities should then appear as in the screenshot bel
 
 <figure>
 	<a id="fig:beauti17"></a>
-	<img style="width:80%;" src="figures/beauti17.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti17.png" alt="BEAUti">
 	<figcaption>Figure 17: Previewing the prior density for the Heterochromini calibration.</figcaption>
 </figure>
 
@@ -337,7 +337,7 @@ Once all these constraints are added, the BEAUti window should look as shown bel
 
 <figure>
 	<a id="fig:beauti18"></a>
-	<img style="width:80%;" src="figures/beauti18.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti18.png" alt="BEAUti">
 	<figcaption>Figure 18: Adding all calibrations.</figcaption>
 </figure>
 
@@ -347,7 +347,7 @@ The BEAUti window should then look as in the next screenshot.
 
 <figure>
 	<a id="fig:beauti19"></a>
-	<img style="width:80%;" src="figures/beauti19.png" alt="BEAUti">
+	<img style="width:88%;" src="figures/beauti19.png" alt="BEAUti">
 	<figcaption>Figure 19: Specifying chain length and output.</figcaption>
 </figure>
 
@@ -360,7 +360,7 @@ Open BEAST2, load file `Near_et_al_red.xml`, and try running the MCMC analysis.
 
 <figure>
 	<a id="fig:beast1"></a>
-	<img style="width:50%;" src="figures/beast1.png" alt="BEAST">
+	<img style="width:62%;" src="figures/beast1.png" alt="BEAST">
 	<figcaption>Figure 20: Starting the BEAST analysis.</figcaption>
 </figure>
 
@@ -368,7 +368,7 @@ Most likely, the MCMC analysis is going to crash right at the start with an erro
 
 <figure>
 	<a id="fig:beast2"></a>
-	<img style="width:50%;" src="figures/beast2.png" alt="BEAST">
+	<img style="width:62%;" src="figures/beast2.png" alt="BEAST">
 	<figcaption>Figure 21: Error message due to failure to initialize the MCMC chain.</figcaption>
 </figure>
 
@@ -418,7 +418,7 @@ The Tracer window should then look as shown in the next screenshot.
 
 <figure>
 	<a id="fig:tracer1"></a>
-	<img style="width:80%;" src="figures/tracer1.png" alt="BEAST">
+	<img style="width:88%;" src="figures/tracer1.png" alt="BEAST">
 	<figcaption>Figure 22: Analyzing results with Tracer.</figcaption>
 </figure>
 
@@ -432,7 +432,7 @@ You should see that after a steep increase at the very beginning of the MCMC, th
 
 <figure>
 	<a id="fig:tracer2"></a>
-	<img style="width:80%;" src="figures/tracer2.png" alt="BEAST">
+	<img style="width:88%;" src="figures/tracer2.png" alt="BEAST">
 	<figcaption>Figure 23: Analyzing results with Tracer.</figcaption>
 </figure>
 
@@ -444,7 +444,7 @@ You should see a trace as shown below.
 
 <figure>
 	<a id="fig:tracer3"></a>
-	<img style="width:80%;" src="figures/tracer3.png" alt="BEAST">
+	<img style="width:88%;" src="figures/tracer3.png" alt="BEAST">
 	<figcaption>Figure 24: Analyzing results with Tracer.</figcaption>
 </figure>
 
@@ -460,7 +460,7 @@ You'll see that this divergence event was estimated around 65 Ma, with a range o
 
 <figure>
 	<a id="fig:tracer5"></a>
-	<img style="width:80%;" src="figures/tracer5.png" alt="BEAST">
+	<img style="width:88%;" src="figures/tracer5.png" alt="BEAST">
 	<figcaption>Figure 25: Analyzing results with Tracer.</figcaption>
 </figure>
 
@@ -470,7 +470,7 @@ These should look similar to those shown in the screenshot below.
 
 <figure>
 	<a id="fig:tracer6"></a>
-	<img style="width:80%;" src="figures/tracer6.png" alt="BEAST">
+	<img style="width:88%;" src="figures/tracer6.png" alt="BEAST">
 	<figcaption>Figure 26: Analyzing results with Tracer.</figcaption>
 </figure>
 
@@ -487,7 +487,7 @@ The TreeAnnotator window should then look as shown below.
 
 <figure>
 	<a id="fig:treeannotator1"></a>
-	<img style="width:60%;" src="figures/treeannotator1.png" alt="TreeAnnotator">
+	<img style="width:62%;" src="figures/treeannotator1.png" alt="TreeAnnotator">
 	<figcaption>Figure 27: Generating a summary tree with TreeAnnotator.</figcaption>
 </figure>
 
@@ -499,7 +499,7 @@ The tree should then be shown as in the screenshot below.
 
 <figure>
 	<a id="fig:figtree1"></a>
-	<img style="width:80%;" src="figures/figtree1.png" alt="FigTree">
+	<img style="width:88%;" src="figures/figtree1.png" alt="FigTree">
 	<figcaption>Figure 28: Visualizing the summary tree with FigTree.</figcaption>
 </figure>
 
@@ -514,7 +514,7 @@ The tree should then be shown as in the screenshot below.
 
 - **Question 1:** When you select "TreeHeight" in the list on the left and click on the tab for "Estimates" in the top right, you'll see the following information:<figure>
 	<a id="fig:tracer4"></a>
-	<img style="width:80%;" src="figures/tracer4.png" alt="BEAST">
+	<img style="width:88%;" src="figures/tracer4.png" alt="BEAST">
 	<figcaption>Figure A1: Analyzing results with Tracer.</figcaption>
 </figure>As specified in the summary statistics on the top right part of the window, the mean estimate for the age of the first split should be around 160 Ma. The confidence interval is reported as the "95% HPD interval", the highest-posterior-density interval containing 95% of the posterior distribution. In other words, this is the shortest interval within which 95% of the samples taken by the MCMC can be found. In this case, it is relatively wide, ranging from around 125 Ma to about 225 Ma.
 
