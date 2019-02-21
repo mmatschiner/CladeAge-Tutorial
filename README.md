@@ -370,7 +370,7 @@ Most likely, the MCMC analysis is going to crash right at the start with an erro
 	<figcaption>Figure 21: Error message due to failure to initialize the MCMC chain.</figcaption>
 </figure>
 
-This is a common problem when several fossil constraints are specified: According to the error message, BEAST2 could not find a proper state to initialize. This means that even after several attempts, no starting state of the MCMC chain could be found that had a non-zero probability. Most often, the issue is that the tree that BEAST2 randomly generates to start the chain is in conflict with one or more fossil constraints. Unfortunately, the only way to fix this issue is to manually edit the XML file and specify a starting tree that is in agreement with the specified fossil constraints. In particular, because all fossil constraints impose hard minimum ages on the origin of the respective clades, these clades must at least be as old as the minimum age in the starting tree. In case of doubt, it is usually safer to make the starting tree too old rather than too young, since the course of the MCMC chain should, at least after the burnin, not be influenced by the starting state anymore anyway. Some helpful advice on how to specify starting trees is provided on the [BEAST2](https://www.beast2.org/fix-starting-tree/) webpage. With trees of hundreds of taxa, generating a suitable starting tree can be a tricky task in itself, but with the small number of 24 species used here, writing a starting tree by hand is feasible.
+This is a common problem when several fossil constraints are specified: According to the error message, BEAST2 could not find a proper state to initialize. This means that even after several attempts, no starting state of the MCMC chain could be found that had a non-zero probability. Most often, the issue is that the tree that BEAST2 randomly generates to start the chain is in conflict with one or more fossil constraints. The way to fix this issue is to specify a starting tree that is in agreement with the specified fossil constraints. In particular, because all fossil constraints impose hard minimum ages on the origin of the respective clades, these clades must at least be as old as the minimum age in the starting tree. In case of doubt, it is usually safer to make the starting tree too old rather than too young, since the course of the MCMC chain should, at least after the burnin, not be influenced by the starting state anymore anyway. Some helpful advice on how to specify starting trees is provided on the [BEAST2](https://www.beast2.org/fix-starting-tree/) webpage. With trees of hundreds of taxa, generating a suitable starting tree can be a tricky task in itself, but with the small number of 24 species used here, writing a starting tree by hand is feasible.
 
 > Copy and paste the below starting tree string into a new FigTree window.
 
@@ -378,7 +378,45 @@ This is a common problem when several fossil constraints are specified: Accordin
 ((((((((((((((Oreochromis_niloticus:50,Heterochromis_multidensA:50):10,(Cichla_temensisA:50,Heros_appendictulatusA:50):10):10,Etroplus_maculatusA:70):30,Oryzias_latipes:100):10,(Trachinotus_carolinusA:70,(Channa_striataA:60,Monopterus_albusA:60):10):40):10,Gasterosteus_acuC:120):10,Astrapogon_stellatusA:130):10,(Aulostomus_chinensisA:80,Thunnus_albacaresA:80):60):10,Porichthys_notatusA:150):10,Diplacanthopoma_brunneaA:160):10,Sargocentron_cornutumA:170):10,(Rondeletia_loricataA:100,Monocentris_japonicaA:100):80):10,Polymixia_japonicaA:190):10,((((Gadus_morhua:70,Stylephorus_chordatusB:70):10,Zenopsis_conchiferaB:80):10,Percopsis_omiscomaycusA:90):10,Regalecus_Glesne:100):100)
 ```
 
-As you'll see, I just arbitrarily specified for most branches a length of 10 million years, and I made sure that particularly the more recent divergence events agree with the respective fossil constraints (e.g. by placing the divergence of *Oreochromis niloticus* and *Heterochromis multidens* at 50 Ma because the origin of the clade "Other African cichlid tribes", represented by *Oreochromis niloticus* is constrained to be at least 45 Ma).
+Then, set a tick next to "Node Labels" to display node ages. As you'll see, I just arbitrarily specified for most branches a length of 10 million years, and I made sure that particularly the more recent divergence events agree with the respective fossil constraints (e.g. by placing the divergence of *Oreochromis niloticus* and *Heterochromis multidens* at 50 Ma because the origin of the clade "Other African cichlid tribes", represented by *Oreochromis niloticus* is constrained to be at least 45 million years old).
+
+There are two ways to specify starting trees for BEAST2 analyses; either again using BEAUti or by editing the XML file in a text editor.
+
+>To do this with BEAUti, click on the "View" menu and select "Show Starting tree panel", as shown in the next screenshot.
+
+<figure>
+	<a id="fig:beauti20"></a>
+	<img style="width:88%;" src="figures/beauti20.png" alt="BEAUti">
+	<figcaption>Figure 22: Displaying the starting tree panel.</figcaption>
+</figure>
+
+The starting tree panel should appear, as in the screenshot below.
+
+<figure>
+	<a id="fig:beauti21"></a>
+	<img style="width:88%;" src="figures/beauti21.png" alt="BEAUti">
+	<figcaption>Figure 23: The starting tree panel.</figcaption>
+</figure>
+
+> From the menu at the top of the panel, choose "Newick Tree", as shown in the next screenshot.
+
+<figure>
+	<a id="fig:beauti22"></a>
+	<img style="width:88%;" src="figures/beauti22.png" alt="BEAUti">
+	<figcaption>Figure 24: Choosing starting tree input options.</figcaption>
+</figure>
+
+> Then, copy the starting tree string into the input field next to "Newick", as shown below.
+
+<figure>
+	<a id="fig:beauti23"></a>
+	<img style="width:88%;" src="figures/beauti23.png" alt="BEAUti">
+	<figcaption>Figure 25: Specifying a starting tree in BEAUti.</figcaption>
+</figure>
+
+> Save the XML file again with "Save" in the "File" menu, open it again in BEAST2, and try running the analysis again. This time, the MCMC should begin to run.
+
+If for some reason adding the starting tree in BEAUti should not work, this can alternatively be done in a text editor, as described below (if you did add it in BEAUti, you may skip the next three steps):
 
 > Open file `Near_et_al_red.xml` in a text editor and find the block shown below on lines 337-341.
 
@@ -401,7 +439,7 @@ As you'll see, I just arbitrarily specified for most branches a length of 10 mil
 		</init>
 ```
 
-> Save the file after adding the tree string, open it again in BEAST2, and try running the analysis again. This time, the MCMC should begin to run.
+> Save the file after adding the tree string, open it again in BEAST2, and launch the analysis.
 
 Depending on the speed of your computer, this analysis will take half a day or longer. You could cancel the BEAST2 analysis after some time if you don't want to wait for it to finish, and you could instead continue the rest of tutorial with the prepared results that you'll find in files `Near_et_al_red.log` and `Near_et_al_red.trees` (see links to these files in the menu to the left).
 
